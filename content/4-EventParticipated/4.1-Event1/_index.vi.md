@@ -1,29 +1,32 @@
 ---
 title: "Event 1"
-date: 2025-09-15
+date: 2025-09-06
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 # Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
 
 ### Mục Đích Của Sự Kiện
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+- Phát triển thế hệ AWS Builders chất lượng cao cho Việt Nam.  
+
+- Trang bị cho sinh viên các kỹ năng thực hành về Điện toán đám mây, DevOps, AI/ML, Bảo mật, và Dữ liệu & Phân tích.  
+
+- Kết nối sinh viên với cộng đồng AWS Study Group gồm hơn 47.000 thành viên và các doanh nghiệp đối tác của AWS.  
+
 
 ### Danh Sách Diễn Giả
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+- **Ông Nguyễn Gia Hưng** – Trưởng bộ phận Kiến trúc Giải pháp, AWS Việt Nam  
+- **Ông Đỗ Huy Thắng** – Trưởng nhóm DevOps, VNG  
+- **Ông Danh Hoàng Hiếu Nghị** – Kỹ sư GenAI, Renova  
+- **Bà Bùi Hồ Linh Nhi** – Kỹ sư Trí tuệ Nhân tạo, SoftwareOne  
+- **Ông Phạm Nguyễn Hải Anh** – Kỹ sư Điện toán Đám mây, G-Asia Pacific  
+- **Ông Nguyễn Đồng Thanh Hiệp** – Kỹ sư Điện toán Đám mây Cấp cao, G-Asia Pacific  
 
 ### Nội Dung Nổi Bật
 

@@ -1,57 +1,42 @@
 ---
 title: "Week 2 Worklog"
-date: 2025-09-15
+date: 2025-09-21
 weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
 
 ### Week 2 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Understand basic AWS services and how to use AWS Console & CLI.
+* Practice deploying EC2, connecting via SSH, and attaching EBS volumes.
+* Learn VPC networking architecture, VPN, Peering, and Transit Gateway.
+
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+
+| Day | Task                                                                                                                                                                                                                           | Start Date | Completion Date | Reference Material     |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ---------------------- |
+| 1   | - Learn AWS services: <br>&emsp; + Compute, Storage, Networking, Database <br> - Study VPC architecture: Subnet, Route Table, Internet Gateway, NAT Gateway                                                                   |  2025/09/15 |  2025/09/15      |https://000003.awsstudygroup.com/          |
+| 2   |- **Practice:** <br>&emsp; + Create Access Key <br>&emsp; + Configure CLI <br>&emsp; + Verify configuration info                                         |  2025/09/16 |  2025/09/16      |https://000003.awsstudygroup.com/          |
+| 3   | - Learn EC2: Instance Types, AMI, EBS <br> - SSH connection to EC2 <br> - Assign Elastic IP <br> - Learn Security Groups, NACL, VPC Flow Logs                                                                                   |  2025/09/17 |  2025/09/17      |https://000019.awsstudygroup.com/         |
+| 4   | - **Practice:** <br>&emsp; + Launch EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach EBS volume <br> - Learn VPC Peering and configure Peering between 2 VPCs                                                      |  2025/09/18 |  2025/09/18      | https://000019.awsstudygroup.com/            |
+| 5   | - Learn AWS Transit Gateway <br> - Compare VPC Peering vs Transit Gateway <br> - Configure Transit Gateway and set up Attachments between multiple VPCs                                                                         |  2025/09/19 |  2025/09/19      | https://000020.awsstudygroup.com/   |
+| 6   | - Review all learned content <br> - Consolidate knowledge and prepare for the upcoming week                                                                                                                                    |  2025/09/20 |  2025/09/20      |                        |
+| 7   | - Test AWS CLI and Console <br> - Write weekly report <br> - Evaluate learning progress                                                                                                                                        |  2025/09/21 |  2025/09/21      |                        |
 
 
 ### Week 2 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Gained a solid understanding of AWS VPC networking: CIDR, Subnet, Route Table, Internet Gateway, NAT Gateway.
+* Successfully configured AWS CLI and executed basic commands such as:
+  * `aws configure`
+  * `aws ec2 describe-instances`
+  * `aws ec2 describe-regions`
+* Launched an EC2 instance, connected via SSH, and attached an EBS volume.
+* Applied Security Groups and NACLs to control access.
+* Enabled VPC Flow Logs to monitor network traffic.
+* Set up VPC Peering between two VPCs and configured Route Tables to allow communication.
+* Learned and configured AWS Transit Gateway to connect multiple VPCs in a centralized and efficient manner.
+* Consolidated knowledge and completed the weekly report on time.

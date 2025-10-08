@@ -1,29 +1,34 @@
 ---
 title: "Event 1"
-date: 2025-09-15
+date: 2025-09-06
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+
 
 # Summary Report: “GenAI-powered App-DB Modernization workshop”
 
 ### Event Objectives
+- Develop a high-quality generation of AWS Builders for Vietnam.
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+- Equip students with hands-on skills in Cloud, DevOps, AI/ML, Security, and Data & Analytics.
+
+- Connect students with the AWS Study Group community of 47,000+ members and AWS partner enterprises.
 
 ### Speakers
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+#### From FPT University:
+- **Mr. Nguyễn Trần Phước Bảo** – Head of Corporate Relations Department  
+
+#### From AWS and Guest Speakers:
+- **Mr. Nguyễn Gia Hưng** – Head of Solutions Architect, AWS Vietnam  
+- **Mr. Đỗ Huy Thắng** – DevOps Lead, VNG  
+- **Mr. Danh Hoàng Hiếu Nghị** – GenAI Engineer, Renova  
+- **Ms. Bùi Hồ Linh Nhi** – AI Engineer, SoftwareOne  
+- **Mr. Phạm Nguyễn Hải Anh** – Cloud Engineer, G-Asia Pacific  
+- **Mr. Nguyễn Đồng Thanh Hiệp** – Principal Cloud Engineer, G-Asia Pacific
 
 ### Key Highlights
 
@@ -121,6 +126,10 @@ Attending the **“GenAI-powered App-DB Modernization”** workshop was extremel
 - AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
 
 #### Some event photos
-*Add your event photos here*  
 
+<a href="#"><img src="1.jpg" alt="Ảnh sự kiện 1" width="1500"/></a>
+<hr>
+<a href="#"><img src="2.jpg" alt="Ảnh sự kiện 2" width="1500"/></a>
+<hr>
+<a href="#"><img src="3.jpg" alt="Ảnh sự kiện 3" width="1500"/></a>
 > Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
