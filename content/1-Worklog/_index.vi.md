@@ -13,15 +13,15 @@ pre: " <b> 1. </b> "
 
 Thông thường và cũng là tiêu chuẩn, một worklog được thực hiện trong khoảng 3 tháng (trong suốt thời gian thực tập) với nội dung các tuần như sau:
 
-**Tuần 1:** [Làm quen với AWS và các dịch vụ cơ bản trong AWS](1.1-week1/)
+**Tuần 1:** [Làm quen với AWS và các dịch vụ cơ bản trong AWS.](1.1-week1/)
 
-**Tuần 2:** [Khởi đầu với Amazon VPC và AWS VPN kết nối Site-to-Site](1.2-week2/)
+**Tuần 2:** [Khởi đầu với Amazon VPC và AWS VPN kết nối Site-to-Site.](1.2-week2/)
 
-**Tuần 3:** [Tính toán VM trên AWS và Tự động hóa EC2 - EFS/FSx - Lightsail - MGN](1.3-week3/)
+**Tuần 3:** [Tính toán VM trên AWS và Tự động hóa EC2 - EFS/FSx - Lightsail - MGN.](1.3-week3/)
 
-**Tuần 4:** [Làm công việc C...](1.4-week4/)
+**Tuần 4:** [Học các dịch vụ lưu trữ AWS: S3, Glacier, Snow Family, Storage Gateway và Backup.](1.4-week4/)
 
-**Tuần 5:** [Làm công việc D...](1.5-week5/)
+**Tuần 5:** [Tìm hiểu cơ bản về bảo mật và quản lý truy cập AWS.](1.5-week5/)
 
 **Tuần 6:** [Làm công việc E...](1.6-week6/)
 

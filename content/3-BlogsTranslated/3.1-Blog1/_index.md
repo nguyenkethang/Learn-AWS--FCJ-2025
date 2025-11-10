@@ -1,126 +1,138 @@
 ---
-title: "Blog 1"
-date: 2025-09-15
+title: "BLog 1"
+date: 2025-05-01
 weight: 1
 chapter: false
 pre: " <b> 3.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# Getting Started with Healthcare Data Lakes: Using Microservices
+# Announcement: 194 New Partners Achieve AWS Competency, Service Delivery, Service Ready, and MSP Designations in April
 
-Data lakes can help hospitals and healthcare facilities turn data into business insights, maintain business continuity, and protect patient privacy. A **data lake** is a centralized, managed, and secure repository to store all your data, both in its raw and processed forms for analysis. Data lakes allow you to break down data silos and combine different types of analytics to gain insights and make better business decisions.
-
-This blog post is part of a larger series on getting started with setting up a healthcare data lake. In my final post of the series, *“Getting Started with Healthcare Data Lakes: Diving into Amazon Cognito”*, I focused on the specifics of using Amazon Cognito and Attribute Based Access Control (ABAC) to authenticate and authorize users in the healthcare data lake solution. In this blog, I detail how the solution evolved at a foundational level, including the design decisions I made and the additional features used. You can access the code samples for the solution in this Git repo for reference.
+**Author:** Nick Paris  
+**Date Published:** 2025/05/01  
+**Category:** Announcements, APN Launches, AWS Partner Network  
 
 ---
 
-## Architecture Guidance
+## Introduction
 
-The main change since the last presentation of the overall architecture is the decomposition of a single service into a set of smaller services to improve maintainability and flexibility. Integrating a large volume of diverse healthcare data often requires specialized connectors for each format; by keeping them encapsulated separately as microservices, we can add, remove, and modify each connector without affecting the others. The microservices are loosely coupled via publish/subscribe messaging centered in what I call the “pub/sub hub.”
+Written by **Nick Paris**, Marketing Director of APN – AWS Partner Network.
 
-This solution represents what I would consider another reasonable sprint iteration from my last post. The scope is still limited to the ingestion and basic parsing of **HL7v2 messages** formatted in **Encoding Rules 7 (ER7)** through a REST interface.
+The **AWS Partner Network (APN)** is a global community that leverages **Amazon Web Services (AWS)** technologies, programs, competencies, and tools to build solutions and deliver services for customers.
 
-**The solution architecture is now as follows:**
+APN includes over **130,000 partners** from more than **200 countries**, with **70% headquartered outside the United States**. Together, partners and AWS deliver innovative solutions, solve technical challenges, win contracts, and bring greater value to customers.
 
-> *Figure 1. Overall architecture; colored boxes represent distinct services.*
-
----
-
-While the term *microservices* has some inherent ambiguity, certain traits are common:  
-- Small, autonomous, loosely coupled  
-- Reusable, communicating through well-defined interfaces  
-- Specialized to do one thing well  
-- Often implemented in an **event-driven architecture**
-
-When determining where to draw boundaries between microservices, consider:  
-- **Intrinsic**: technology used, performance, reliability, scalability  
-- **Extrinsic**: dependent functionality, rate of change, reusability  
-- **Human**: team ownership, managing *cognitive load*
+To achieve APN designations such as **AWS Competency**, **AWS Service Delivery**, **AWS Service Ready**, and **AWS Managed Service Provider (MSP)**, organizations must undergo a rigorous technical validation and assessment process.
 
 ---
 
-## Technology Choices and Communication Scope
+## 🆕 AWS Competency Partners
 
-| Communication scope                       | Technologies / patterns to consider                                                        |
-| ----------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Within a single microservice              | Amazon Simple Queue Service (Amazon SQS), AWS Step Functions                               |
-| Between microservices in a single service | AWS CloudFormation cross-stack references, Amazon Simple Notification Service (Amazon SNS) |
-| Between services                          | Amazon EventBridge, AWS Cloud Map, Amazon API Gateway                                      |
+To successfully adopt cloud in today’s complex IT environments, customers can collaborate with **AWS Competency Partners**.
 
----
+This program validates and promotes partners who demonstrate **deep technical expertise** and **proven customer success** in specific solution areas. Guidance from these experts helps businesses achieve **better and more efficient outcomes**.
 
-## The Pub/Sub Hub
+### 🔹 New Partners
 
-Using a **hub-and-spoke** architecture (or message broker) works well with a small number of tightly related microservices.  
-- Each microservice depends only on the *hub*  
-- Inter-microservice connections are limited to the contents of the published message  
-- Reduces the number of synchronous calls since pub/sub is a one-way asynchronous *push*
+#### **Advertising & Marketing Technology**
+- Anzu.io | EMEA | Advertising Platform; Digital Customer Experience
 
-Drawback: **coordination and monitoring** are needed to avoid microservices processing the wrong message.
+#### **Cloud Operations**
+- avvale | EMEA | Cloud Financial Management  
+- Qucoon | EMEA | Cloud Governance  
+- Select Soluções | LATAM | Cloud Financial Management  
+- ControlMonkey | EMEA | Cloud Governance & Operations Management  
 
----
+#### **Consumer Packaged Goods**
+- AssetWatch | NAMER | Manufacturing  
+- Cloudinary | NAMER | Marketing  
 
-## Core Microservice
+#### **Cyber Insurance**
+- Measured Analytics and Insurance | NAMER | Cybersecurity Insurance  
 
-Provides foundational data and communication layer, including:  
-- **Amazon S3** bucket for data  
-- **Amazon DynamoDB** for data catalog  
-- **AWS Lambda** to write messages into the data lake and catalog  
-- **Amazon SNS** topic as the *hub*  
-- **Amazon S3** bucket for artifacts such as Lambda code
+#### **Data & Analytics**
+- Ankercloud | EMEA | Consulting Services  
+- Trianz | NAMER | Consulting Services  
 
-> Only allow indirect write access to the data lake through a Lambda function → ensures consistency.
+#### **DevOps**
+- Syntax Systems | NAMER | Consulting Services  
 
----
+#### **Digital Workplace**
+- LCM Go Cloud | EMEA | Consulting Services  
+- Celoxis Technologies | APAC | Collaboration Platform  
 
-## Front Door Microservice
+#### **Education**
+- CloudiQS | EMEA | Consulting Services  
+- CloudThat | APAC | Consulting Services  
+- Wiz | NAMER | Administration & Operations  
+- Zscaler | NAMER | Administration & Operations  
 
-- Provides an API Gateway for external REST interaction  
-- Authentication & authorization based on **OIDC** via **Amazon Cognito**  
-- Self-managed *deduplication* mechanism using DynamoDB instead of SNS FIFO because:  
-  1. SNS deduplication TTL is only 5 minutes  
-  2. SNS FIFO requires SQS FIFO  
-  3. Ability to proactively notify the sender that the message is a duplicate  
-
----
-
-## Staging ER7 Microservice
-
-- Lambda “trigger” subscribed to the pub/sub hub, filtering messages by attribute  
-- Step Functions Express Workflow to convert ER7 → JSON  
-- Two Lambdas:  
-  1. Fix ER7 formatting (newline, carriage return)  
-  2. Parsing logic  
-- Result or error is pushed back into the pub/sub hub  
+*(...) full list continues in the same format)*
 
 ---
 
-## New Features in the Solution
+## 🆕 AWS Managed Service Providers (MSP)
 
-### 1. AWS CloudFormation Cross-Stack References
-Example *outputs* in the core microservice:
-```yaml
-Outputs:
-  Bucket:
-    Value: !Ref Bucket
-    Export:
-      Name: !Sub ${AWS::StackName}-Bucket
-  ArtifactBucket:
-    Value: !Ref ArtifactBucket
-    Export:
-      Name: !Sub ${AWS::StackName}-ArtifactBucket
-  Topic:
-    Value: !Ref Topic
-    Export:
-      Name: !Sub ${AWS::StackName}-Topic
-  Catalog:
-    Value: !Ref Catalog
-    Export:
-      Name: !Sub ${AWS::StackName}-Catalog
-  CatalogArn:
-    Value: !GetAtt Catalog.Arn
-    Export:
-      Name: !Sub ${AWS::StackName}-CatalogArn
+The **AWS Managed Service Provider (MSP)** program validates partners with **extensive experience delivering comprehensive AWS solutions**, including:
+- Planning and design  
+- Build and migration  
+- Operation and support  
+- Automation and optimization  
+
+### **Newest MSP Partners**
+- Dedicatted | NAMER  
+- Genpact | NAMER  
+- Globant | LATAM  
+
+---
+
+## 🆕 AWS Service Ready Products
+
+The **AWS Service Ready** program validates software products built by AWS Partners that demonstrate **integration and compatibility** with specific AWS services.
+
+### **Newest Products**
+#### Amazon CloudFront Ready
+- Beijing Zhichi Bochuang Technology Co., Ltd. | China | Media Management; Monitoring & Analytics; Security  
+- UDS | LATAM | Media Management  
+
+#### Amazon Linux Ready
+- Cloudpense | China | Amazon Linux 2  
+- Tacnode | NAMER | Amazon Linux 2022  
+
+#### AWS Graviton Ready
+- Share Creators Inc. | China | Application Stack  
+
+---
+
+## 🆕 AWS Service Delivery Partners
+
+This program validates partners who have **deep technical knowledge** and **proven success** in delivering specific AWS services.
+
+### **Examples:**
+#### Amazon API Gateway Delivery Partners
+- ADAPTURE Technology Group | NAMER  
+- Intellergy | EMEA  
+- Kinu | NAMER  
+
+#### Amazon CloudFront Delivery Partners
+- Bion Solutions | EMEA  
+- Caylent | NAMER  
+- IT Visionary | EMEA  
+- Kinu | NAMER  
+
+---
+
+## 💡 More Value, Greater Profitability for AWS Partners
+
+AWS’s mission is to make **APN** and the **AWS Marketplace** the **preferred go-to-market path** that helps partners:
+- Increase profitability  
+- Win more deals  
+- Scale faster  
+
+AWS is enhancing the **AWS Partner experience** to provide more relevant, consistent, and predictable guidance.  
+**Your profitability and your customers’ success** are our top priorities.
+
+In 2025, AWS will continue to provide a proven success path that helps partners **drive greater customer value and profitability**.  
+The journey ahead is exciting — and we’re thrilled to be part of it with you!
+
+---

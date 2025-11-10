@@ -1,126 +1,140 @@
 ---
-title: "Blog 1"
-date: 2025-09-15
+title: "Nhật ký web 1"
+date: 2025-05-01
 weight: 1
 chapter: false
 pre: " <b> 3.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-# Bắt đầu với healthcare data lakes: Sử dụng microservices
+# Công bố 194 Đối tác mới đạt các chuyên môn AWS Competency, Service Delivery, Service Ready và MSP trong tháng 4
 
-Các data lake có thể giúp các bệnh viện và cơ sở y tế chuyển dữ liệu thành những thông tin chi tiết về doanh nghiệp và duy trì hoạt động kinh doanh liên tục, đồng thời bảo vệ quyền riêng tư của bệnh nhân. **Data lake** là một kho lưu trữ tập trung, được quản lý và bảo mật để lưu trữ tất cả dữ liệu của bạn, cả ở dạng ban đầu và đã xử lý để phân tích. data lake cho phép bạn chia nhỏ các kho chứa dữ liệu và kết hợp các loại phân tích khác nhau để có được thông tin chi tiết và đưa ra các quyết định kinh doanh tốt hơn.
-
-Bài đăng trên blog này là một phần của loạt bài lớn hơn về việc bắt đầu cài đặt data lake dành cho lĩnh vực y tế. Trong bài đăng blog cuối cùng của tôi trong loạt bài, *“Bắt đầu với data lake dành cho lĩnh vực y tế: Đào sâu vào Amazon Cognito”*, tôi tập trung vào các chi tiết cụ thể của việc sử dụng Amazon Cognito và Attribute Based Access Control (ABAC) để xác thực và ủy quyền người dùng trong giải pháp data lake y tế. Trong blog này, tôi trình bày chi tiết cách giải pháp đã phát triển ở cấp độ cơ bản, bao gồm các quyết định thiết kế mà tôi đã đưa ra và các tính năng bổ sung được sử dụng. Bạn có thể truy cập các code samples cho giải pháp tại Git repo này để tham khảo.
+**Tác giả:** Nick Paris  
+**Ngày đăng:** 2025/05/01  
+**Danh mục:** Thông báo, Ra mắt APN, Mạng lưới Đối tác AWS  
 
 ---
 
-## Hướng dẫn kiến trúc
+## Giới thiệu
 
-Thay đổi chính kể từ lần trình bày cuối cùng của kiến trúc tổng thể là việc tách dịch vụ đơn lẻ thành một tập hợp các dịch vụ nhỏ để cải thiện khả năng bảo trì và tính linh hoạt. Việc tích hợp một lượng lớn dữ liệu y tế khác nhau thường yêu cầu các trình kết nối chuyên biệt cho từng định dạng; bằng cách giữ chúng được đóng gói riêng biệt với microservices, chúng ta có thể thêm, xóa và sửa đổi từng trình kết nối mà không ảnh hưởng đến những kết nối khác. Các microservices được kết nối rời thông qua tin nhắn publish/subscribe tập trung trong cái mà tôi gọi là “pub/sub hub”.
+Được viết bởi **Nick Paris**, Giám đốc Tiếp thị APN – AWS Partner Network.
 
-Giải pháp này đại diện cho những gì tôi sẽ coi là một lần lặp nước rút hợp lý khác từ last post của tôi. Phạm vi vẫn được giới hạn trong việc nhập và phân tích cú pháp đơn giản của các **HL7v2 messages** được định dạng theo **Quy tắc mã hóa 7 (ER7)** thông qua giao diện REST.
+**Mạng lưới Đối tác AWS (APN)** là một cộng đồng toàn cầu tận dụng các công nghệ, chương trình, chuyên môn và công cụ của **Amazon Web Services (AWS)** để xây dựng giải pháp và cung cấp dịch vụ cho khách hàng.
 
-**Kiến trúc giải pháp bây giờ như sau:**
+APN có hơn **130,000 đối tác** từ hơn **200 quốc gia**, với **70% có trụ sở bên ngoài Hoa Kỳ**. Cùng nhau, các đối tác và AWS cung cấp các giải pháp đổi mới, giải quyết các thách thức kỹ thuật, giành được hợp đồng và mang lại giá trị lớn hơn cho khách hàng.
 
-> *Hình 1. Kiến trúc tổng thể; những ô màu thể hiện những dịch vụ riêng biệt.*
-
----
-
-Mặc dù thuật ngữ *microservices* có một số sự mơ hồ cố hữu, một số đặc điểm là chung:  
-- Chúng nhỏ, tự chủ, kết hợp rời rạc  
-- Có thể tái sử dụng, giao tiếp thông qua giao diện được xác định rõ  
-- Chuyên biệt để giải quyết một việc  
-- Thường được triển khai trong **event-driven architecture**
-
-Khi xác định vị trí tạo ranh giới giữa các microservices, cần cân nhắc:  
-- **Nội tại**: công nghệ được sử dụng, hiệu suất, độ tin cậy, khả năng mở rộng  
-- **Bên ngoài**: chức năng phụ thuộc, tần suất thay đổi, khả năng tái sử dụng  
-- **Con người**: quyền sở hữu nhóm, quản lý *cognitive load*
+Để đạt được các chuyên môn APN như **AWS Competency**, **AWS Service Delivery**, **AWS Service Ready** và **AWS Managed Service Provider (MSP)**, các tổ chức phải trải qua quy trình xác thực kỹ thuật và đánh giá nghiêm ngặt.
 
 ---
 
-## Lựa chọn công nghệ và phạm vi giao tiếp
+## 🆕 Các Đối tác AWS Competency
 
-| Phạm vi giao tiếp                        | Các công nghệ / mô hình cần xem xét                                                        |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Trong một microservice                   | Amazon Simple Queue Service (Amazon SQS), AWS Step Functions                               |
-| Giữa các microservices trong một dịch vụ | AWS CloudFormation cross-stack references, Amazon Simple Notification Service (Amazon SNS) |
-| Giữa các dịch vụ                         | Amazon EventBridge, AWS Cloud Map, Amazon API Gateway                                      |
+Để thành công trong việc áp dụng đám mây trong môi trường CNTT phức tạp ngày nay, khách hàng có thể hợp tác với **Đối tác AWS Competency**.
 
----
+Chương trình này xác thực và quảng bá các đối tác có **chuyên môn kỹ thuật sâu rộng** và **thành công đã được chứng minh** qua các dự án thực tế. Hướng dẫn từ các chuyên gia này giúp doanh nghiệp đạt **kết quả tốt hơn và hiệu quả hơn**.
 
-## The pub/sub hub
+### 🔹 Các Đối tác Mới
 
-Việc sử dụng kiến trúc **hub-and-spoke** (hay message broker) hoạt động tốt với một số lượng nhỏ các microservices liên quan chặt chẽ.  
-- Mỗi microservice chỉ phụ thuộc vào *hub*  
-- Kết nối giữa các microservice chỉ giới hạn ở nội dung của message được xuất  
-- Giảm số lượng synchronous calls vì pub/sub là *push* không đồng bộ một chiều
+#### **Công nghệ Quảng cáo và Tiếp thị**
+- Anzu.io | EMEA | Nền tảng Quảng cáo; Trải nghiệm Khách hàng Kỹ thuật số
 
-Nhược điểm: cần **phối hợp và giám sát** để tránh microservice xử lý nhầm message.
+#### **Vận hành Đám mây**
+- avvale | EMEA | Quản lý Tài chính Đám mây  
+- Qucoon | EMEA | Quản trị Đám mây  
+- Select Soluções | LATAM | Quản lý Tài chính Đám mây  
+- ControlMonkey | EMEA | Quản trị & Quản lý Vận hành  
 
----
+#### **Hàng tiêu dùng**
+- AssetWatch | NAMER | Sản xuất  
+- Cloudinary | NAMER | Tiếp thị  
 
-## Core microservice
+#### **Bảo hiểm An ninh mạng**
+- Measured Analytics and Insurance | NAMER | Bảo hiểm An ninh mạng  
 
-Cung cấp dữ liệu nền tảng và lớp truyền thông, gồm:  
-- **Amazon S3** bucket cho dữ liệu  
-- **Amazon DynamoDB** cho danh mục dữ liệu  
-- **AWS Lambda** để ghi message vào data lake và danh mục  
-- **Amazon SNS** topic làm *hub*  
-- **Amazon S3** bucket cho artifacts như mã Lambda
+#### **Dữ liệu & Phân tích**
+- Ankercloud | EMEA | Dịch vụ Tư vấn  
+- Trianz | NAMER | Dịch vụ Tư vấn  
 
-> Chỉ cho phép truy cập ghi gián tiếp vào data lake qua hàm Lambda → đảm bảo nhất quán.
+#### **DevOps**
+- Syntax Systems | NAMER | Dịch vụ Tư vấn  
 
----
+#### **Không gian làm việc Kỹ thuật số**
+- LCM Go Cloud | EMEA | Dịch vụ Tư vấn  
+- Celoxis Technologies | APAC | Nền tảng Hợp tác  
 
-## Front door microservice
+#### **Giáo dục**
+- CloudiQS | EMEA | Dịch vụ Tư vấn  
+- CloudThat | APAC | Dịch vụ Tư vấn  
+- Wiz | NAMER | Hành chính và Vận hành  
+- Zscaler | NAMER | Hành chính và Vận hành  
 
-- Cung cấp API Gateway để tương tác REST bên ngoài  
-- Xác thực & ủy quyền dựa trên **OIDC** thông qua **Amazon Cognito**  
-- Cơ chế *deduplication* tự quản lý bằng DynamoDB thay vì SNS FIFO vì:
-  1. SNS deduplication TTL chỉ 5 phút
-  2. SNS FIFO yêu cầu SQS FIFO
-  3. Chủ động báo cho sender biết message là bản sao
-
----
-
-## Staging ER7 microservice
-
-- Lambda “trigger” đăng ký với pub/sub hub, lọc message theo attribute  
-- Step Functions Express Workflow để chuyển ER7 → JSON  
-- Hai Lambda:
-  1. Sửa format ER7 (newline, carriage return)
-  2. Parsing logic  
-- Kết quả hoặc lỗi được đẩy lại vào pub/sub hub
+*(...) danh sách đầy đủ tiếp tục theo cùng cấu trúc trên)*
 
 ---
 
-## Tính năng mới trong giải pháp
+## 🆕 Các Nhà Cung cấp Dịch vụ Quản lý AWS (MSP)
 
-### 1. AWS CloudFormation cross-stack references
-Ví dụ *outputs* trong core microservice:
-```yaml
-Outputs:
-  Bucket:
-    Value: !Ref Bucket
-    Export:
-      Name: !Sub ${AWS::StackName}-Bucket
-  ArtifactBucket:
-    Value: !Ref ArtifactBucket
-    Export:
-      Name: !Sub ${AWS::StackName}-ArtifactBucket
-  Topic:
-    Value: !Ref Topic
-    Export:
-      Name: !Sub ${AWS::StackName}-Topic
-  Catalog:
-    Value: !Ref Catalog
-    Export:
-      Name: !Sub ${AWS::StackName}-Catalog
-  CatalogArn:
-    Value: !GetAtt Catalog.Arn
-    Export:
-      Name: !Sub ${AWS::StackName}-CatalogArn
+Chương trình **AWS Managed Service Provider (MSP)** xác thực các đối tác có **kinh nghiệm cung cấp giải pháp AWS toàn diện**, bao gồm:
+- Lập kế hoạch và thiết kế  
+- Xây dựng và di chuyển  
+- Vận hành và hỗ trợ  
+- Tự động hóa và tối ưu hóa  
+
+### **Đối tác MSP mới nhất**
+- Dedicatted | NAMER  
+- Genpact | NAMER  
+- Globant | LATAM  
+
+---
+
+## 🆕 Các Sản phẩm AWS Service Ready
+
+Chương trình **AWS Service Ready** xác thực các sản phẩm phần mềm được xây dựng bởi Đối tác AWS, đảm bảo **tích hợp và tương thích tốt** với các dịch vụ AWS cụ thể.
+
+### **Các sản phẩm mới nhất**
+#### Amazon CloudFront Ready
+- 北京智齿博创科技有限公司 | China | Quản lý Truyền thông; Giám sát & Phân tích; Bảo mật  
+- UDS | LATAM | Quản lý Truyền thông  
+
+#### Amazon Linux Ready
+- Cloudpense | China | Amazon Linux 2  
+- Tacnode | NAMER | Amazon Linux 2022  
+
+#### AWS Graviton Ready
+- Share Creators Inc. | China | Ngăn xếp Ứng dụng  
+
+
+---
+
+## 🆕 Các Đối tác Cung cấp Dịch vụ AWS (AWS Service Delivery Partners)
+
+Chương trình này xác thực các đối tác có **kiến thức kỹ thuật chuyên sâu** và **thành công đã được chứng minh** trong việc cung cấp các dịch vụ AWS cụ thể.
+
+### **Ví dụ:**
+#### Amazon API Gateway Delivery Partners
+- ADAPTURE Technology Group | NAMER  
+- Intellergy | EMEA  
+- Kinu | NAMER  
+
+#### Amazon CloudFront Delivery Partners
+- Bion Solutions | EMEA  
+- Caylent | NAMER  
+- IT Visionary | EMEA  
+- Kinu | NAMER  
+
+
+---
+
+## 💡 Nhiều Giá Trị Hơn, Lợi Nhuận Lớn Hơn cho Đối Tác AWS
+
+Nhiệm vụ của AWS là biến **APN** và **AWS Marketplace** thành **con đường tiếp cận thị trường ưu tiên**, giúp đối tác:
+- Tăng khả năng sinh lời  
+- Giành nhiều hợp đồng hơn  
+- Mở rộng quy mô nhanh hơn  
+
+AWS đang cải tiến **trải nghiệm Đối tác AWS** để mang lại hướng dẫn phù hợp, thống nhất và dễ đoán hơn.  
+**Khả năng sinh lời của bạn và thành công của khách hàng** là mục tiêu số một của chúng tôi.
+
+ Trong năm 2025, AWS sẽ tiếp tục cung cấp lộ trình thành công đã được chứng minh, giúp đối tác **thúc đẩy giá trị khách hàng và lợi nhuận lớn hơn**.  
+ Hành trình phía trước thật thú vị — và chúng tôi rất vui mừng được đồng hành cùng bạn!
+
+---
