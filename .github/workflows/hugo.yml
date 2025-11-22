@@ -36,7 +36,7 @@ jobs:
         
       - name: Build with Hugo
         run: |
-          hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+          hugo --baseURL "${{ steps.pages.outputs.base_url }}/" --verbose
           
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
