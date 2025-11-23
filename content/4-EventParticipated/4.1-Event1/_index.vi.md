@@ -125,10 +125,14 @@ Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải 
 
 #### Một số hình ảnh khi tham gia sự kiện
 
-![all](1.jpg)
+![Ảnh sự kiện 1](1.jpg?width=1500)
 
-![all](2.jpg)
+---
 
-![all](3.jpg)
+![Ảnh sự kiện 2](2.jpg?width=1500)
+
+---
+
+![Ảnh sự kiện 3](3.jpg?width=1500)
 
 > Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.

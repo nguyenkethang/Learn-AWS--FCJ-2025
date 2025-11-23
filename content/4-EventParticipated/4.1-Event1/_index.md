@@ -127,9 +127,13 @@ Attending the **“GenAI-powered App-DB Modernization”** workshop was extremel
 
 #### Some event photos
 
-<a href="#"><img src="1.jpg" alt="Ảnh sự kiện 1" width="1500"/></a>
-<hr>
-<a href="#"><img src="2.jpg" alt="Ảnh sự kiện 2" width="1500"/></a>
-<hr>
-<a href="#"><img src="3.jpg" alt="Ảnh sự kiện 3" width="1500"/></a>
+![Ảnh sự kiện 1](1.jpg?width=1500)
+
+---
+
+![Ảnh sự kiện 2](2.jpg?width=1500)
+
+---
+
+![Ảnh sự kiện 3](3.jpg?width=1500)
 > Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
