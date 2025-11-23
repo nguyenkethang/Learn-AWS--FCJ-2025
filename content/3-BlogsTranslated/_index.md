@@ -6,12 +6,6 @@ chapter: false
 pre: " <b> 3. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
-This section will list and introduce the blogs you have translated. For example:
-
 ###  [Blog 1 - Announcement: 194 New Partners Achieve AWS Competency, Service Delivery, Service Ready, and MSP Designations in April](3.1-Blog1/)
 This blog highlights AWS’s announcement that 194 partners achieved new designations in April, spanning AWS Competency, Service Delivery, Service Ready, and MSP programs. You will learn why these designations are important for validating a partner’s ability to deliver specialized, high-quality AWS solutions, and how they reflect proven technical expertise across real-world customer projects. The article also explains what each designation represents, how partners meet the rigorous AWS requirements, and why these achievements help customers confidently choose the right AWS-certified providers for their cloud modernization, optimization, and innovation initiatives.
 
