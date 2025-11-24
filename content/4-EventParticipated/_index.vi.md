@@ -18,11 +18,11 @@ pre: " <b> 4. </b> "
 ---
 
 ### [Event 2](4.2-Event2/)  
-&emsp;**Tên sự kiện:** GenAI-powered App-DB Modernization workshop  
+&emsp;🏷️**Tên sự kiện:** AI-Driven Development Life Cycle: Reimagining Software Engineering  
 
-&emsp;**Thời gian:** 09:00, ngày 13 tháng 8 năm 2025  
+&emsp;⏰**Thời gian:** 14:00 – 16:30, Thứ Sáu ngày 3 tháng 10 năm 2025
 
-&emsp;**Địa điểm:** Tầng 26, Tòa nhà Bitexco Tower, số 02 đường Hải Triều, phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh  
+&emsp;📍**Địa điểm:** Tầng 26, Tòa nhà Bitexco Financial Tower, số 2 đường Hải Triều, phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh  
 
-&emsp;**Vai trò trong sự kiện:** Người tham dự 
+&emsp;👤**Vai trò trong sự kiện:** Người tham dự 
 
