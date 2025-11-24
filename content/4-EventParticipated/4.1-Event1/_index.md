@@ -6,134 +6,65 @@ chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
+## 🎉 KICK-OFF AWS FIRST CLOUD JOURNEY WORKFORCE OJT FALL 2025 🎉
 
+### 🎯 Event Objectives
+- Congratulate students selected for the AWS First Cloud Journey – OJT FALL 2025 program.  
+- Introduce program overview, learning roadmap, and career opportunities in Cloud, DevOps, AI/ML, Security, and Data.  
+- Create connections between students, experts, and the AWS Study Group community (47,000+ members).
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+### 👥 Guest Speakers & Industry Experts
+- **Nguyen Gia Hung** – Head of Solutions Architect, AWS Vietnam  
+- **Do Huy Thang** – DevOps Lead, VNG  
+- **Danh Hoang Hieu Nghi** – GenAI Engineer, Renova  
+- **Bui Ho Linh Nhi** – AI Engineer, SoftwareOne  
+- **Pham Nguyen Hai Anh** – Cloud Engineer, G-Asia Pacific  
+- **Nguyen Dong Thanh Hiep** – Principal Cloud Engineer, G-Asia Pacific  
 
-### Event Objectives
-- Develop a high-quality generation of AWS Builders for Vietnam.
+### 📋 Key Content
+- FCJ program introduction: established in 2021, trained over 2,000 students, 150+ alumni working at major tech companies.  
+- Career guidance: growing demand for Cloud talent, increasing importance of DevOps – AI/ML – Data skills.  
+- Real-world insights from enterprises: importance of CI/CD, Infrastructure as Code, automation, and AWS certifications.  
+- Alumni sharing their journey: from FCJ students to GenAI Engineers, AI Engineers, and Cloud Engineers at international companies.
 
-- Equip students with hands-on skills in Cloud, DevOps, AI/ML, Security, and Data & Analytics.
+### 💡 What I Learned
 
-- Connect students with the AWS Study Group community of 47,000+ members and AWS partner enterprises.
+- Gained clear understanding of career development paths in Cloud, DevOps, AI/ML, and real-world skill requirements from enterprises.  
+- Recognized the importance of building a solid AWS foundation, especially through certifications and hands-on experience.  
+- Understood the role of DevOps in modern system operations and essential tools like CI/CD, automation, and IaC.  
+- Learned from alumni about work approaches, professional direction, and personal development in tech environments.  
+- Realized that networking, community participation, and connecting with mentors/speakers greatly expand opportunities and support learning.  
+- Understood the importance of soft skills like communication, teamwork, and proactivity in real-world work.  
+- Gained stronger motivation and clearer direction for the learning journey and pursuing a career in cloud computing.
 
-### Speakers
+#### 🎯 Learning from Highly Skilled Speakers
+- Heard insights from experts directly working with real AWS systems, helping understand how they solve infrastructure and security challenges.
+- Learned real deployment experiences, not just theory, especially how to optimize architecture and handle incidents in enterprise environments.
+- Better understood common mistakes in cloud system design and how to prevent them based on expert recommendations.
+- Learned about new trends in AI, DevOps, and Cloud, as well as how to integrate modern AWS services into real projects.
+- Opportunity to access diverse perspectives from different roles: Solutions Architect, DevOps, AI Engineer, Cloud Engineer.
 
-#### From FPT University:
-- **Mr. Nguyễn Trần Phước Bảo** – Head of Corporate Relations Department  
+### 📝 Lessons Learned
+- Need to master AWS fundamentals, combined with hands-on practice through projects.  
+- AWS certifications are a major advantage when job hunting.  
+- Soft skills, communication, and teamwork strongly support success in enterprise environments.  
+- Learning from community, mentors, and alumni accelerates development.
 
-#### From AWS and Guest Speakers:
-- **Mr. Nguyễn Gia Hưng** – Head of Solutions Architect, AWS Vietnam  
-- **Mr. Đỗ Huy Thắng** – DevOps Lead, VNG  
-- **Mr. Danh Hoàng Hiếu Nghị** – GenAI Engineer, Renova  
-- **Ms. Bùi Hồ Linh Nhi** – AI Engineer, SoftwareOne  
-- **Mr. Phạm Nguyễn Hải Anh** – Cloud Engineer, G-Asia Pacific  
-- **Mr. Nguyễn Đồng Thanh Hiệp** – Principal Cloud Engineer, G-Asia Pacific
+### ⭐ Personal Experience
+- The event provided many real-world perspectives from experts and alumni.  
+- Gained clearer understanding of Cloud/DevOps/AI career paths.  
+- Created strong motivation to continue pursuing cloud computing in the future.
 
-### Key Highlights
+#### 📸 Some Event Photos
 
-#### Identifying the drawbacks of legacy application architecture
-
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
-
-#### Transitioning to modern application architecture – Microservices
-
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
-
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
-
-#### Domain-Driven Design (DDD)
-
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
-
-#### Event-Driven Architecture
-
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
-
-#### Compute Evolution
-
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
-
-#### Amazon Q Developer
-
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
-
-### Key Takeaways
-
-#### Design Mindset
-
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
-
-#### Technical Architecture
-
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
-
-#### Modernization Strategy
-
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
-
-### Applying to Work
-
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
-
-### Event Experience
-
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
-
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
-
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
-
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
-
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
-
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
-
-#### Some event photos
-
-![Ảnh sự kiện 1](1.jpg?width=1500)
+![Event Photo 1](1.jpg?width=1500)
 
 ---
 
-![Ảnh sự kiện 2](2.jpg?width=1500)
+![Event Photo 2](2.jpg?width=1500)
 
 ---
 
-![Ảnh sự kiện 3](3.jpg?width=1500)
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+![Event Photo 3](3.jpg?width=1500)
+
+> Overall, the event not only provided technical knowledge but also helped me change my thinking about application design, system modernization, and more effective cross-team collaboration.
