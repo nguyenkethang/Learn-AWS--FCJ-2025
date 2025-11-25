@@ -7,8 +7,10 @@ pre: " <b> 1.4. </b> "
 ---
 
 ### Week 4 Objectives:
-* Understand key AWS Storage Services including Amazon S3, S3 Glacier, AWS Snow Family, AWS Storage Gateway, and AWS Backup.  
-* Learn the concepts of RTO/RPO and disaster recovery strategies on AWS.  
+* Master key AWS Storage Services including **Amazon S3**, **Glacier**, **Snow Family**, **Storage Gateway**, **AWS Backup**, and **Amazon FSx**.  
+* Understand **RTO/RPO** concepts and **Disaster Recovery** strategies on AWS.  
+* Complete hands-on labs for S3 Bucket, Backup Plan, Storage Gateway, VM Migration, and FSx for Windows File Server.
+* Master advanced S3 features: Access Point, Storage Class, CORS, Versioning, Replication.
 
 ---
 
@@ -16,93 +18,345 @@ pre: " <b> 1.4. </b> "
 
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | ----- | ---------- | --------------- | ------------------ |
-| 1 | - Study an overview of Amazon Simple Storage Service (S3): <br>&emsp; + Object storage concept <br>&emsp; + Buckets and objects <br>&emsp; + Data durability and availability <br>&emsp; + Multipart upload, trigger events, REST API | 2025/09/29 | 2025/09/29 |[Amazon Simple Storage Service ( S3 )](https://www.youtube.com/watch?v=_yunukwcAwc&list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&index=104) |
-| 2 | - Learn about S3 Storage Classes: <br>&emsp; + Standard, Standard-IA, Intelligent Tiering, One Zone-IA, Glacier / Deep Archive <br>&emsp; + Configure Object Lifecycle Management for automated data transitions | 2025/09/30 | 2025/09/30 |[Amazon Simple Storage Service ( S3 )](https://www.youtube.com/watch?v=_yunukwcAwc&list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&index=104) |
-| 3 | - Study S3 access control: <br>&emsp; + Access Control List (ACL) <br>&emsp; + Bucket Policy & IAM Policy <br>&emsp; + S3 Access Point <br>&emsp; + Endpoint & Versioning | 2025/10/01 | 2025/10/01 | [AWS S3 Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/cors.html) |
-| 4 | - Explore Static Website Hosting and CORS on S3 <br>&emsp; + Understand Cross-Origin Resource Sharing (CORS) mechanism <br>&emsp; + Configure CORS policy for domain-based access | 2025/10/02 | 2025/10/02 | [AWS S3 Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/cors.html) |
-| 5 | - Study S3 Glacier and retrieval options: Expedited, Standard, Bulk <br> - Learn about S3 Object Keys and performance optimization using prefixes and partitions | 2025/10/03 | 2025/10/03 | [AWS S3 Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/cors.html) |
-| 6 | - Learn about AWS Snow Family: <br>&emsp; + Snowball (80 TB) <br>&emsp; + Snowball Edge (100 TB with compute) <br>&emsp; + Snowmobile (100 PB) <br> - Study AWS Storage Gateway types (File / Volume / Tape) <br> - Understand AWS Backup and Disaster Recovery concepts: RTO, RPO, and 4 recovery strategies | 2025/10/04 | 2025/10/05 | [AWS Snow Family Video](http://youtube.com/watch?v=YXn8Q_Hpsu4&list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&index=106) |
+| 1 | - **Module 04-01:** AWS Storage Services Overview <br> - **Module 04-02:** Amazon S3 - Access Point - Storage Class <br>&emsp; + Object Storage concepts, Buckets and Objects <br>&emsp; + S3 Access Point for access management <br>&emsp; + Storage Classes: Standard, IA, Intelligent-Tiering, Glacier <br> - **Lab 13-02.1:** Create S3 Bucket | 2025/09/29 | 2025/09/29 | https://000013.awsstudygroup.com/ |
+| 2 | - **Module 04-03:** S3 Static Website & CORS - Control Access - Object Key & Performance - Glacier <br>&emsp; + Static Website Hosting <br>&emsp; + CORS Configuration <br>&emsp; + Bucket Policy, ACL, IAM Policy <br>&emsp; + Object Key Optimization <br>&emsp; + Glacier Retrieval Options <br> - **Lab 13-02.2:** Deploy Infrastructure <br> - **Lab 13-03:** Create Backup Plan | 2025/09/30 | 2025/09/30 | https://000013.awsstudygroup.com/ |
+| 3 | - **Module 04-04:** Snow Family - Storage Gateway - Backup <br>&emsp; + Snowball, Snowball Edge, Snowmobile <br>&emsp; + File Gateway, Volume Gateway, Tape Gateway <br>&emsp; + AWS Backup Service <br>&emsp; + RTO/RPO and Disaster Recovery Strategies <br> - **Lab 13-04:** Set up notifications <br> - **Lab 13-05:** Test Restore <br> - **Lab 13-06:** Clean up resources | 2025/10/01 | 2025/10/01 | https://000013.awsstudygroup.com/ |
+| 4 | - **Lab 14-01:** VMWare Workstation Setup <br> - **Lab 14-02.1:** Export Virtual Machine from On-premises <br> - **Lab 14-02.2:** Upload virtual machine to AWS <br> - **Lab 14-02.3:** Import virtual machine to AWS <br> - **Lab 14-02.4:** Deploy Instance from AMI | 2025/10/02 | 2025/10/02 | https://000014.awsstudygroup.com/ |
+| 5 | - **Lab 14-03.1:** Setting up S3 bucket ACL <br> - **Lab 14-03.2:** Export virtual machine from Instance <br> - **Lab 14-05:** Resource Cleanup on AWS Cloud <br> - **Lab 24-2.1:** Create Storage Gateway <br> - **Lab 24-2.2:** Create File Shares | 2025/10/03 | 2025/10/03 | https://000024.awsstudygroup.com/ |
+| 6 | - **Lab 24-2.3:** Mount File shares on On-premises machine <br> - **Lab 24-3:** Clean up resources <br> - **Lab 25-2.2:** Create an SSD Multi-AZ file system <br> - **Lab 25-2.3:** Create an HDD Multi-AZ file system <br> - **Lab 25-3:** Create new file shares | 2025/10/04 | 2025/10/04 | https://000025.awsstudygroup.com/ |
+| 7 | - **Lab 25-4:** Test Performance <br> - **Lab 25-5:** Monitor Performance <br> - **Lab 25-6:** Enable data deduplication <br> - **Lab 25-7:** Enable shadow copies <br> - **Lab 25-8:** Manage user sessions and open files <br> - **Lab 25-9:** Enable user storage quotas <br> - **Lab 25-11:** Scale throughput capacity <br> - **Lab 25-12:** Scale storage capacity <br> - **Lab 25-13:** Delete environment <br> - Write weekly report and review all learned content | 2025/10/05 | 2025/10/05 | https://000025.awsstudygroup.com/ |
 
 ---
 
 ### Week 4 Achievements:
 
 #### Amazon Simple Storage Service (S3)
+This week, I learned in detail about **Amazon S3** – an Object Storage service on AWS.  
+Data in S3 is stored as **objects** in **buckets**, with 99.999999999% durability and 99.99% availability.  
+Each object can be up to **5TB**, and data is **replicated across 3 Availability Zones (AZ)** within the same Region for safety.  
 
-· Amazon S3 is an object-based storage service, meaning if you want to modify part of a file, you must re-upload the entire file.  
-· Suitable for **Write Once, Read Many (WORM)** data.  
-· There is no limit on total storage capacity, but each object can be up to **5 TB**.  
-· Data is replicated across **3 Availability Zones** by default for high durability and availability (99.999999999% durability and 99.99% availability).  
-· Supports **multipart uploads**, **event triggers**, and **REST API** access.  
+Amazon S3 supports useful features like **Multipart Upload** (uploading large files in parts), **Trigger Events** (triggering actions on upload or delete events), and access via **REST API (HTTP)**.  
+S3 is particularly suitable for **Write Once Read Many (WORM)** data types.
 
 #### Amazon S3 Storage Classes
 
-· S3 offers multiple storage classes to optimize cost:  
-  - **S3 Standard** – frequently accessed data.  
-  - **S3 Standard-IA** – infrequently accessed data.  
-  - **S3 Intelligent-Tiering** – automatically moves objects between classes based on access frequency.  
-  - **S3 One Zone-IA** – infrequent access, single AZ.  
-  - **S3 Glacier / Deep Archive** – long-term, low-cost archival storage.  
+Amazon S3 is divided into multiple **Storage Classes** to optimize cost and performance:  
+- **S3 Standard:** For frequently accessed data.  
+- **S3 Standard-IA:** For infrequently accessed data.  
+- **S3 Intelligent-Tiering:** Automatically moves data between tiers based on access frequency.  
+- **S3 One Zone-IA:** Infrequent access data, stored in only 1 AZ, lower cost.  
+- **S3 Glacier / Deep Archive:** Long-term storage, extremely low cost.  
 
-· **Object Lifecycle Management** can automatically transition data between storage classes.  
+Users can set up **Object Lifecycle Management** to automatically transition data between classes over time.
 
-#### Access Control in S3
+#### Access Control, Endpoint & Versioning
 
-· Two main access control mechanisms:  
-  - **S3 Access Control List (ACL)** – older method granting specific access to accounts or groups.  
-  - **Bucket Policy & IAM Policy** – define fine-grained access at the resource level.  
+Amazon S3 supports 2 main permission mechanisms:  
+- **Access Control List (ACL)** – grants permissions directly at the object or bucket level.  
+- **Bucket Policy / IAM Policy** – allows detailed permission definition through Resources.  
 
-#### S3 Endpoint & Versioning
-
-· **S3 Endpoint** allows access to buckets through AWS private networks.  
-· **Versioning** enables recovery of previous object versions after deletion or overwrite.  
+Additionally, **Versioning** can be enabled to recover old data when overwritten or deleted, and **S3 Endpoint** can be used for secure access within AWS internal networks.
 
 #### Static Website Hosting & CORS
 
-· S3 supports hosting static websites (HTML, CSS, JS, media).  
-· **CORS (Cross-Origin Resource Sharing)** allows resources (fonts, scripts, etc.) to be accessed from other domains.  
+Amazon S3 allows **hosting static websites (HTML, CSS, JS)**, very suitable for SPA (Single Page Application).  
+The service supports **CORS (Cross-Origin Resource Sharing)**, allowing resources like scripts, images, or fonts to be accessed from different domains.
 
-#### Object Key & Performance
+#### Performance Optimization
 
-· Each object in S3 is flat (non-hierarchical) and identified by a unique key.  
-· For optimal performance, random prefixes can be used to distribute load across multiple partitions.  
+In S3, each object is assigned a unique **Object Key**, with no true hierarchical directory structure.  
+To optimize retrieval performance, **random prefixes** can be used to distribute data evenly across multiple partitions.
 
 #### Amazon S3 Glacier
 
-· Low-cost storage for long-term data retention with delayed access.  
-· Three retrieval options:  
-  - **Expedited:** 1–5 minutes  
-  - **Standard:** 3–5 hours  
-  - **Bulk:** 5–12 hours  
+**S3 Glacier** is a low-cost storage class for long-term data that is rarely accessed.  
+There are three data retrieval methods:  
+- **Expedited:** 1–5 minutes.  
+- **Standard:** 3–5 hours.  
+- **Bulk:** 5–12 hours.  
 
 #### AWS Snow Family
 
-· **Snowball:** Data migration device up to 80 TB.  
-· **Snowball Edge:** 100 TB capacity with local compute capability.  
-· **Snowmobile:** Large-scale migration up to 100 PB (Exabyte-level).  
+The **Snow Family** product line includes:  
+- **Snowball:** Device for migrating on-premise data to AWS, maximum capacity 80TB.  
+- **Snowball Edge:** Supports on-site compute processing, 100TB capacity.  
+- **Snowmobile:** Solution for extremely large data transport, up to 100PB, using specialized containers.
 
 #### AWS Storage Gateway
 
-· Hybrid storage solution connecting on-premises environments with AWS Cloud.  
-· Supports three types:  
-  - **File Gateway (NFS/SMB → S3)**  
-  - **Volume Gateway (iSCSI → S3 / EBS Snapshot)**  
-  - **Tape Gateway (VTL → S3 / Glacier)**  
+**AWS Storage Gateway** service helps connect **on-premise environments with AWS Cloud**, providing hybrid storage solutions.  
+Includes three main types:  
+- **File Gateway:** File sharing (NFS/SMB) → S3 storage.  
+- **Volume Gateway:** Provides block storage (iSCSI) → saves snapshots to S3/EBS.  
+- **Tape Gateway:** Virtual tape backup solution (VTL) → stores on S3/Glacier.
 
 #### AWS Backup & Disaster Recovery
 
-· Centralized backup management service for AWS resources (EBS, EC2, RDS, DynamoDB, EFS, Storage Gateway).  
-· **RTO (Recovery Time Objective):** Time required to restore services.  
-· **RPO (Recovery Point Objective):** Maximum acceptable data loss window.  
-· Four disaster recovery strategies:  
-  1. Backup & Restore  
-  2. Pilot Light (Active–Standby)  
-  3. Low-Capacity Active–Active  
-  4. Full-Capacity Active–Active  
+**AWS Backup** is a centralized backup management service for AWS resources (EBS, EC2, RDS, DynamoDB, EFS, Storage Gateway).  
+Two important concepts:  
+- **RTO (Recovery Time Objective):** Time needed to restore the system.  
+- **RPO (Recovery Point Objective):** Maximum amount of data that can be lost.  
+
+Four common disaster recovery strategies:  
+1. **Backup & Restore**  
+2. **Pilot Light (Active–Standby)**  
+3. **Low Capacity Active–Active**  
+4. **Full Capacity Active–Active**
+
+#### VM Migration to AWS
+
+Through **Lab 14**, I learned how to migrate virtual machines from on-premises to AWS using **VM Import/Export**:
+- Export VM from VMware Workstation
+- Upload VM image to S3
+- Import VM to create AMI
+- Deploy EC2 instances from AMI
+- Export instances back to VM format
+
+#### Amazon FSx for Windows File Server
+
+Through **Lab 25**, I gained hands-on experience with **Amazon FSx for Windows File Server**:
+- Create Multi-AZ file systems (both SSD and HDD)
+- Test and monitor performance
+- Enable advanced features: data deduplication, shadow copies
+- Manage user sessions and storage quotas
+- Scale throughput and storage capacity dynamically
 
 ---
 
 ### Week 4 Summary:
-During this week, I learned in detail about AWS Storage Services including Amazon S3, S3 Glacier, AWS Snow Family, Storage Gateway, and AWS Backup.  
-I understood the storage classes, access control methods, lifecycle policies, versioning, and CORS configurations in S3.  
-Additionally, I explored data migration tools, hybrid storage solutions, and disaster recovery mechanisms using RTO/RPO strategies.
+
+This week I completed comprehensive learning and hands-on practice of AWS Storage Services including Amazon S3, Glacier, Snow Family, Storage Gateway, AWS Backup, and Amazon FSx for Windows File Server.
+
+Through 4 theory modules and 4 hands-on lab series (Lab 13, 14, 24, 25), I mastered how to classify data by access needs, configure detailed permissions, deploy automated backups, and establish effective disaster recovery policies.
+
+In particular, I practiced important skills:
+- Create and manage S3 Buckets with different Storage Classes
+- Deploy AWS Backup Plan for EC2 and EBS with notifications and restore testing
+- Configure Storage Gateway for hybrid cloud connectivity and mount file shares
+- Migrate VMs from on-premises to AWS through VM Import/Export
+- Deploy and optimize Amazon FSx for Windows File Server with full features: deduplication, shadow copies, storage quotas, and scaling
+
+This knowledge helps me understand the mechanisms of Object Storage, Access Control, Versioning, Lifecycle in S3, as well as hybrid storage solutions and file systems on AWS, enabling flexible, secure, and cost-effective data management.
+
+---
+
+### Reference Materials:
+
+**Lab Workshops:**
+* **Lab 13 - Deploy AWS Backup:**  
+  https://000013.awsstudygroup.com/
+
+* **Lab 14 - VM Import/Export:**  
+  https://000014.awsstudygroup.com/
+
+* **Lab 24 - Storage Gateway:**  
+  https://000024.awsstudygroup.com/
+
+* **Lab 25 - Amazon FSx for Windows File Server:**  
+  https://000025.awsstudygroup.com/
+
+**Official AWS Documentation:**
+* **Amazon S3 User Guide:**  
+  https://docs.aws.amazon.com/AmazonS3/latest/userguide/
+
+* **S3 Storage Classes:**  
+  https://aws.amazon.com/s3/storage-classes/
+
+* **S3 Access Points:**  
+  https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points.html
+
+* **S3 Static Website Hosting:**  
+  https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html
+
+* **S3 CORS Configuration:**  
+  https://docs.aws.amazon.com/AmazonS3/latest/userguide/cors.html
+
+* **S3 Versioning:**  
+  https://docs.aws.amazon.com/AmazonS3/latest/userguide/Versioning.html
+
+* **S3 Replication:**  
+  https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication.html
+
+* **S3 Lifecycle Management:**  
+  https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lifecycle-mgmt.html
+
+* **S3 Performance Optimization:**  
+  https://docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-performance.html
+
+* **Amazon S3 Glacier:**  
+  https://docs.aws.amazon.com/amazonglacier/latest/dev/
+
+* **AWS Snow Family:**  
+  https://aws.amazon.com/snow/
+
+* **AWS Snowball:**  
+  https://docs.aws.amazon.com/snowball/
+
+* **AWS Storage Gateway:**  
+  https://docs.aws.amazon.com/storagegateway/
+
+* **AWS Backup:**  
+  https://docs.aws.amazon.com/aws-backup/
+
+* **AWS Backup Best Practices:**  
+  https://docs.aws.amazon.com/aws-backup/latest/devguide/best-practices.html
+
+* **Amazon FSx for Windows File Server:**  
+  https://docs.aws.amazon.com/fsx/latest/WindowsGuide/
+
+* **VM Import/Export:**  
+  https://docs.aws.amazon.com/vm-import/latest/userguide/
+
+* **Amazon CloudFront:**  
+  https://docs.aws.amazon.com/cloudfront/
+
+* **Disaster Recovery on AWS:**  
+  https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/
+
+**Video Tutorials:**
+* **Amazon S3 Tutorial:**  
+  https://www.youtube.com/watch?v=_yunukwcAwc
+
+* **S3 Storage Classes Explained:**  
+  https://www.youtube.com/watch?v=BYW-HCr3Qbc
+
+* **AWS Storage Gateway Deep Dive:**  
+  https://www.youtube.com/watch?v=9wgaV70FeaM
+
+* **AWS Snow Family Overview:**  
+  https://www.youtube.com/watch?v=YXn8Q_Hpsu4
+
+* **AWS Backup Tutorial:**  
+  https://www.youtube.com/watch?v=dCy7ixko3tE
+
+* **Amazon FSx for Windows File Server:**  
+  https://www.youtube.com/watch?v=CW2hz-Uy7Gg
+
+* **S3 Static Website with CloudFront:**  
+  https://www.youtube.com/watch?v=mls8tiiI3uc
+
+* **VM Migration to AWS:**  
+  https://www.youtube.com/watch?v=afSJaFJsfXw
+
+* **S3 Versioning and Replication:**  
+  https://www.youtube.com/watch?v=4EOaAkY4pNE
+
+* **AWS Storage Services Overview:**  
+  https://www.youtube.com/watch?v=6vNC_BCqFmI
+
+**Training Courses:**
+* **AWS Skill Builder - S3 Primer:**  
+  https://explore.skillbuilder.aws/learn/course/external/view/elearning/50/amazon-s3-primer
+
+* **AWS Skill Builder - Storage Learning Plan:**  
+  https://explore.skillbuilder.aws/learn/learning_plan/view/51/storage-learning-plan
+
+* **AWS Training - Storage Fundamentals:**  
+  https://aws.amazon.com/training/learn-about/storage/
+
+* **Coursera - AWS Fundamentals: Migrating to the Cloud:**  
+  https://www.coursera.org/learn/aws-fundamentals-migrating-to-the-cloud
+
+* **A Cloud Guru - AWS Certified Solutions Architect:**  
+  https://acloudguru.com/course/aws-certified-solutions-architect-associate-saa-c03
+
+**Blog Posts and Articles:**
+* **AWS Storage Blog:**  
+  https://aws.amazon.com/blogs/storage/
+
+* **S3 Best Practices:**  
+  https://aws.amazon.com/blogs/storage/best-practices-for-amazon-s3/
+
+* **Optimizing S3 Performance:**  
+  https://aws.amazon.com/blogs/storage/optimizing-amazon-s3-performance/
+
+* **S3 Security Best Practices:**  
+  https://aws.amazon.com/blogs/security/top-10-security-best-practices-for-securing-data-in-amazon-s3/
+
+* **Hybrid Cloud Storage with Storage Gateway:**  
+  https://aws.amazon.com/blogs/storage/hybrid-cloud-storage-with-aws-storage-gateway/
+
+* **Data Migration Strategies:**  
+  https://aws.amazon.com/blogs/storage/aws-data-migration-strategies/
+
+* **Disaster Recovery Strategies:**  
+  https://aws.amazon.com/blogs/publicsector/rapidly-recover-mission-critical-systems-in-a-disaster/
+
+**Whitepapers:**
+* **AWS Storage Services Overview:**  
+  https://docs.aws.amazon.com/whitepapers/latest/aws-storage-services-overview/
+
+* **Cost Optimization for Storage:**  
+  https://docs.aws.amazon.com/whitepapers/latest/cost-optimization-storage-optimization/
+
+* **Backup and Recovery Approaches Using AWS:**  
+  https://docs.aws.amazon.com/whitepapers/latest/backup-recovery-approaches-using-aws/
+
+* **Hybrid Cloud Storage Architecture:**  
+  https://docs.aws.amazon.com/whitepapers/latest/hybrid-cloud-with-aws/storage.html
+
+**Tools and Calculators:**
+* **AWS Pricing Calculator:**  
+  https://calculator.aws/
+
+* **S3 Storage Lens:**  
+  https://aws.amazon.com/s3/storage-lens/
+
+* **AWS Total Cost of Ownership (TCO) Calculator:**  
+  https://aws.amazon.com/tco-calculator/
+
+**Community Resources:**
+* **AWS re:Post (Community Forum):**  
+  https://repost.aws/
+
+* **AWS Samples GitHub:**  
+  https://github.com/aws-samples
+
+* **Reddit - r/aws:**  
+  https://www.reddit.com/r/aws/
+
+* **Stack Overflow - AWS Tags:**  
+  https://stackoverflow.com/questions/tagged/amazon-web-services
+
+**Best Practices Guides:**
+* **S3 Security Best Practices:**  
+  https://docs.aws.amazon.com/AmazonS3/latest/userguide/security-best-practices.html
+
+* **AWS Well-Architected Framework - Storage:**  
+  https://docs.aws.amazon.com/wellarchitected/latest/framework/storage.html
+
+* **Data Protection in S3:**  
+  https://docs.aws.amazon.com/AmazonS3/latest/userguide/DataDurability.html
+
+* **AWS Backup Best Practices:**  
+  https://docs.aws.amazon.com/prescriptive-guidance/latest/backup-recovery/backup.html
+
+**Hands-on Labs and Workshops:**
+* **AWS Workshops - Storage:**  
+  https://workshops.aws/categories/Storage
+
+* **AWS Hands-on Tutorials:**  
+  https://aws.amazon.com/getting-started/hands-on/
+
+* **QwikLabs - AWS Storage:**  
+  https://www.qwiklabs.com/catalog?keywords=aws+storage
+
+**Certification Resources:**
+* **AWS Certified Solutions Architect - Associate Exam Guide:**  
+  https://aws.amazon.com/certification/certified-solutions-architect-associate/
+
+* **AWS Certification Practice Questions:**  
+  https://explore.skillbuilder.aws/learn/course/external/view/elearning/13266/aws-certified-solutions-architect-associate-official-practice-question-set
+
+**Additional Resources:**
+* **AWS Architecture Center:**  
+  https://aws.amazon.com/architecture/
+
+* **AWS Reference Architectures:**  
+  https://aws.amazon.com/architecture/reference-architecture-diagrams/
+
+* **AWS Quick Starts:**  
+  https://aws.amazon.com/quickstart/
+
+* **AWS Solutions Library:**  
+  https://aws.amazon.com/solutions/
