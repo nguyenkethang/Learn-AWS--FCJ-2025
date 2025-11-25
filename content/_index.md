@@ -10,7 +10,7 @@ chapter: false
 
 
 ### Student Information:
-&emsp; 👤 **Full Name:** Nguyen Ke thang
+&emsp; 👤 **Full Name:** Nguyen Ke Thang
 
 &emsp; 📱 **Phone Number:** 0865150304 
 

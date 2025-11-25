@@ -24,4 +24,31 @@ pre: " <b> 4. </b> "
 
 &emsp;📍**Location:** 26th Floor, Bitexco Financial Tower, 2 Hai Trieu Street, Ben Nghe Ward, District 1, Ho Chi Minh City  
 
-&emsp;👤**Role:** Attendee  
+&emsp;👤**Role:** Attendee
+
+### [Event 3](4.3-Event3/)  
+&emsp;🏷️**Event Name:**  AI-Driven Development Life Cycle: Reimagining Software Engineering  
+
+&emsp;⏰**Date & Time:** 14:00 – 16:30, Friday, October 3, 2025 
+
+&emsp;📍**Location:** 26th Floor, Bitexco Financial Tower, 2 Hai Trieu Street, Ben Nghe Ward, District 1, Ho Chi Minh City  
+
+&emsp;👤**Role:** Attendee
+
+### [Event 4](4.4-Event4/)  
+&emsp;🏷️**Event Name:**  AI-Driven Development Life Cycle: Reimagining Software Engineering  
+
+&emsp;⏰**Date & Time:** 14:00 – 16:30, Friday, October 3, 2025 
+
+&emsp;📍**Location:** 26th Floor, Bitexco Financial Tower, 2 Hai Trieu Street, Ben Nghe Ward, District 1, Ho Chi Minh City  
+
+&emsp;👤**Role:** Attendee
+
+### [Event 5](4.5-Event5/)  
+&emsp;🏷️**Event Name:**  AI-Driven Development Life Cycle: Reimagining Software Engineering  
+
+&emsp;⏰**Date & Time:** 14:00 – 16:30, Friday, October 3, 2025 
+
+&emsp;📍**Location:** 26th Floor, Bitexco Financial Tower, 2 Hai Trieu Street, Ben Nghe Ward, District 1, Ho Chi Minh City  
+
+&emsp;👤**Role:** Attendee
