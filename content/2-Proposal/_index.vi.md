@@ -37,7 +37,7 @@ Frontend được triển khai qua **Route 53 + CloudFront**, backend thông qua
 ## 3. Kiến trúc giải pháp
 
 ### Kiến trúc tổng thể:
-![AWS Blood Donation Architecture](AWS%20architecture%20diagrams%20blood%20donation%20support%20systems.png)
+![AWS Blood Donation Architecture](images/image.png)
 
 Hệ thống được thiết kế theo kiến trúc **3-tier trên AWS Cloud** với các thành phần chính:
 

@@ -37,7 +37,7 @@ Frontend is deployed via **Route 53 + CloudFront**, backend through **API Gatewa
 ## 3. Solution Architecture
 
 ### Overall Architecture:
-![AWS Blood Donation Architecture](AWS%20architecture%20diagrams%20blood%20donation%20support%20systems.png)
+![AWS Blood Donation Architecture](images/image.png)
 
 The system is designed with a **3-tier architecture on AWS Cloud** with the following main components:
 
