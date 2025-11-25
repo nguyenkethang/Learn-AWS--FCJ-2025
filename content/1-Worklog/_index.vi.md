@@ -16,9 +16,9 @@ pre: " <b> 1. </b> "
 
 **Tuần 5:** [Tìm hiểu cơ bản về bảo mật và quản lý truy cập AWS.](1.5-week5/)
 
-**Tuần 6:** [Làm công việc E...](1.6-week6/)
+**Tuần 6:** [Học về Amazon RDS, Aurora, Redshift và thực hành triển khai database với VPC.](1.6-week6/)
 
-**Tuần 7:** [Làm công việc G...](1.7-week7/)
+**Tuần 7:** [Học về AWS Database & Analytics: DynamoDB, Kinesis, Glue, Athena và QuickSight.](1.7-week7/)
 
 **Tuần 8:** [Làm công việc H...](1.8-week8/)
 
