@@ -23,9 +23,9 @@ chapter: false
 
 &emsp; **Vị trí thực tập:** FCJ Cloud Intern
 
-&emsp; **Thời gian thực tập:** Từ ngày 08/09/2025 đến ngày 12/11/2025
+&emsp; **Thời gian thực tập:** Từ ngày 08/09/2025 đến ngày 30/12/2025
 
-![Ảnh đại diện của bạn](images/image1.jpg)
+![Ảnh đại diện của bạn](images/image1.jpg?width=500)
 
 ### Nội dung báo cáo
 
