@@ -8,22 +8,10 @@ pre: " <b> 1.3. </b> "
 
 ### Mục tiêu Tuần 3:
 
-* Hiểu khái niệm về **Amazon EC2** như một máy chủ ảo/vật lý trên nền tảng đám mây với khả năng khởi tạo nhanh, co giãn linh hoạt và có thể xử lý nhiều loại workload như web hosting, ứng dụng và cơ sở dữ liệu.  
-
-* Tìm hiểu về **EC2 Instance Types**, cách cấu hình CPU, bộ nhớ, lưu trữ và mạng được định nghĩa, cũng như cách chọn loại phù hợp cho từng workload khác nhau.  
-
-* Khám phá **AMI (Amazon Machine Image)**, **Key Pairs**, và cơ chế sao lưu bằng **Snapshots** để triển khai và quản lý EC2 một cách an toàn.  
-
-* Nắm kiến thức về các tùy chọn lưu trữ trong EC2:  
-  - **EBS (Elastic Block Store):** lưu trữ khối bền vững, độ sẵn sàng cao.  
-  - **Instance Store:** ổ đĩa NVMe tốc độ cao, dữ liệu tạm thời.  
-  - **EFS & FSx:** giải pháp lưu trữ chia sẻ cho môi trường Linux và Windows.  
-
-* Thực hành sử dụng **User Data** và **Metadata** để tự động hóa quá trình khởi tạo instance và lấy thông tin cấu hình của instance.  
-
-* Học cách **EC2 Auto Scaling** hoạt động để tự động thêm hoặc bớt instance dựa trên nhu cầu, tích hợp với Elastic Load Balancer và tối ưu chi phí.  
-
-* Hiểu các mô hình giá của **EC2** (On-Demand, Reserved, Savings Plans, Spot) và trường hợp áp dụng, cùng với các dịch vụ tính toán bổ trợ như **Amazon Lightsail** và **AWS Application Migration Service (MGN)**.  
+* Hiểu rõ các khái niệm cơ bản về **Amazon EC2** (Elastic Compute Cloud): Instance Types, AMI, Key Pair, EBS, Instance Store.  
+* Nắm vững cách sử dụng **User Data** và **Metadata** để tự động hóa cấu hình EC2 khi khởi tạo.  
+* Học cách **EC2 Auto Scaling** hoạt động để tự động thêm hoặc bớt instance dựa trên nhu cầu.  
+* Thực hành các Lab về **AWS Backup**, **Storage Gateway**, và **S3 Static Website** với CloudFront.
 
 ---
 
@@ -31,58 +19,115 @@ pre: " <b> 1.3. </b> "
 
 | Ngày | Nhiệm vụ                                                                                                                                                                                                                           | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ------------------ |
-| 1   | - Làm quen với khái niệm **Amazon EC2**: so sánh với máy chủ vật lý, ưu điểm khởi tạo nhanh, khả năng co giãn linh hoạt, workload phù hợp như web hosting, cơ sở dữ liệu, dịch vụ xác thực |  2025/09/22   |  2025/09/22      | <https://000027.awsstudygroup.com/> |
-| 2   | - Học về **Instance Types**: cách cấu hình CPU (Intel/AMD/ARM/Graviton/GPU), Bộ nhớ, Mạng, Lưu trữ <br> - Tìm hiểu **AMI** và cách khởi tạo nhiều instance cùng lúc từ một AMI |  2025/09/23   |  2025/09/23      | <https://000008.awsstudygroup.com/> |
-| 3   | - Nghiên cứu **EBS (Elastic Block Store)**: lưu trữ khối, replicate trong AZ, snapshot incremental, multi-attach trên Nitro Hypervisor <br> - So sánh EBS với **Instance Store**: hiệu năng cao nhưng mất dữ liệu khi stop instance |  2025/09/24   |  2025/09/24      | <https://000006.awsstudygroup.com/> |
-| 4   | - Tìm hiểu **EC2 User Data**: script chạy khi khởi tạo instance, Linux dùng bash, Windows dùng PowerShell <br> - Nghiên cứu **EC2 Metadata**: thông tin IP private, hostname, security group… |  2025/09/25   |  2025/09/26      | <https://000004.awsstudygroup.com/> |
-| 5   | - Học về **EC2 Auto Scaling**: scale out khi tải tăng, scale in khi tải giảm để tiết kiệm chi phí <br> - Cách Auto Scaling tích hợp với Elastic Load Balancer và hoạt động trên nhiều AZ |  2025/09/26   |  2025/09/27      | <https://000045.awsstudygroup.com/> |
-| 6   | - Nghiên cứu **Các tùy chọn định giá**: On-Demand, Reserved, Savings Plans, Spot Instances và cách kết hợp trong Auto Scaling <br> - Học thêm về **EFS** (hệ thống tệp mạng cho Linux), **FSx** (SMB cho Windows/Linux), và **Lightsail** cho workload nhẹ |  2025/09/27   |  2025/09/28      | <https://000046.awsstudygroup.com/> |
+| 1   | - Học Module 03-01: Compute VM on AWS <br>&emsp; + Module 03-01-01: Amazon EC2 - Instance Type <br>&emsp; + Module 03-01-02: Amazon EC2 - AMI / Backup / Key Pair <br>&emsp; + Module 03-01-03: Amazon EC2 - Elastic Block Store <br>&emsp; + Module 03-01-04: Amazon EC2 - Instance Store |  2025/09/22   |  2025/09/22      | https://docs.aws.amazon.com/ec2/ |
+| 2   | - Học Module 03-01 (tiếp) <br>&emsp; + Module 03-01-05: Amazon EC2 - User Data <br>&emsp; + Module 03-01-06: Amazon EC2 - Meta Data <br>&emsp; + Module 03-01-07: Amazon EC2 - EC2 Auto Scaling <br> - Học Module 03-02: EC2 Autoscaling - EFS/FSx - Lightsail - MGN |  2025/09/23   |  2025/09/23      | https://docs.aws.amazon.com/autoscaling/ |
+| 3   | - **Lab 13 - Phần 1:** Deploy AWS Backup <br>&emsp; + Module 03-Lab13-01: Introduction <br>&emsp; + Module 03-Lab13-02.2: Deploy Infrastructure <br>&emsp; + Module 03-Lab13-03: Create Backup Plan |  2025/09/24   |  2025/09/24      | https://000013.awsstudygroup.com/ |
+| 4   | - **Lab 13 - Phần 2:** Test và Clean up <br>&emsp; + Module 03-Lab13-05: Test Restore <br>&emsp; + Module 03-Lab13-06: Clean up resources <br> - **Lab 24 - Phần 1:** Storage Gateway <br>&emsp; + Module 03-Lab24-01.1: Create S3 Bucket <br>&emsp; + Module 03-Lab24-01.2: Create EC2 for Storage Gateway |  2025/09/25   |  2025/09/25      | https://000024.awsstudygroup.com/ |
+| 5   | - **Lab 24 - Phần 2:** Configure Storage Gateway <br>&emsp; + Module 03-Lab24-02.1: Create Storage Gateway <br>&emsp; + Module 03-Lab24-02.2: Create File Shares <br> - **Lab 57 - Phần 1:** S3 Static Website <br>&emsp; + Module 03-Lab57-02.1: Create S3 Bucket <br>&emsp; + Module 03-Lab57-02.2: Load Data <br>&emsp; + Module 03-Lab57-03: Enable Static Website Feature |  2025/09/26   |  2025/09/26      | https://000057.awsstudygroup.com/ |
+| 6   | - **Lab 57 - Phần 2:** Public Access và CloudFront <br>&emsp; + Module 03-Lab57-04: Configuring Public Access Block <br>&emsp; + Module 03-Lab57-05: Configuring Public Objects <br>&emsp; + Module 03-Lab57-06: Test Website <br>&emsp; + Module 03-Lab57-07.1: Block All Public Access <br>&emsp; + Module 03-Lab57-07.2: Config Amazon CloudFront <br>&emsp; + Module 03-Lab57-07.3: Test Amazon CloudFront |  2025/09/27   |  2025/09/27      | https://000057.awsstudygroup.com/ |
+| 7   | - **Lab 57 - Phần 3:** Versioning và Replication <br>&emsp; + Module 03-Lab57-08: Bucket Versioning <br>&emsp; + Module 03-Lab57-09: Move Objects <br>&emsp; + Module 03-Lab57-10: Replication Object Multi Region <br>&emsp; + Module 03-Lab57-11: Clean up Resources <br> - Viết báo cáo tuần và ôn tập toàn bộ nội dung đã học |  2025/09/28   |  2025/09/28      | https://000057.awsstudygroup.com/ |
 
 
 ---
 
-### Thành tựu Tuần 3:
+### Kết quả đạt được trong Tuần 3:
 
 * **Hiểu các khái niệm về AWS EC2**:  
-  * EC2 tương tự như máy chủ ảo hoặc vật lý nhưng cung cấp khả năng khởi tạo nhanh, co giãn linh hoạt và mở rộng quy mô cao.  
-  * EC2 instance được định nghĩa bởi **Instance Types** (CPU, bộ nhớ, lưu trữ, dung lượng mạng) và được tối ưu cho các workload cụ thể như tính toán, bộ nhớ hoặc lưu trữ chuyên sâu.  
-  * Học về **AMI** để khởi tạo instance, sao lưu bằng **snapshot**, và truy cập an toàn bằng **Key Pair**.  
+  * EC2 Instance Types và cách chọn loại phù hợp với workload.
+  * AMI để khởi tạo instance, Backup/Snapshot để sao lưu, Key Pair để truy cập an toàn.
+  * EBS (lưu trữ khối bền vững) và Instance Store (lưu trữ tạm thời hiệu năng cao).
+  * User Data để tự động chạy script khi khởi tạo, Metadata để lấy thông tin instance.
+  * EC2 Auto Scaling để tự động điều chỉnh số lượng instance theo nhu cầu.
 
-* **Khám phá các tùy chọn lưu trữ của EC2**:  
-  * **EBS (Elastic Block Store):** lưu trữ khối bền vững, được replicate trong một Availability Zone, snapshot lưu trên S3.  
-  * **Instance Store:** bộ nhớ NVMe tốc độ cao, phù hợp cho cache, swap, log; dữ liệu sẽ mất khi dừng instance.  
-  * **EFS (Elastic File System):** lưu trữ mạng mở rộng, có thể chia sẻ cho nhiều instance Linux.  
-  * **FSx:** hệ thống tệp NTFS quản lý, truy cập qua SMB, hỗ trợ Windows và Linux.  
+* **Khám phá các dịch vụ lưu trữ và tính toán bổ sung**:  
+  * EFS (Elastic File System) cho Linux, FSx cho Windows.
+  * Amazon Lightsail cho workload đơn giản với giá cố định.
+  * AWS MGN (Application Migration Service) để di chuyển máy chủ on-premise lên AWS.
 
-* **Tìm hiểu về EC2 Auto Scaling:**  
-  * Auto Scaling tự động điều chỉnh số lượng instance theo nhu cầu (scale-out khi tải tăng, scale-in để tiết kiệm chi phí khi tải giảm).  
-  * Auto Scaling tích hợp với **Elastic Load Balancer (ELB)** và hoạt động trên nhiều Availability Zones.  
-
-* **Khám phá các mô hình giá EC2**:  
-  * **On-Demand:** trả theo nhu cầu, linh hoạt nhất nhưng chi phí cao.  
-  * **Reserved Instances:** hợp đồng dài hạn (1–3 năm) với mức giảm giá.  
-  * **Savings Plans:** linh hoạt hơn, vẫn được giảm giá mà không bị ràng buộc loại instance.  
-  * **Spot Instances:** chi phí thấp nhất, tận dụng tài nguyên dư, nhưng có thể bị thu hồi bất kỳ lúc nào.  
-
-* **Kỹ năng thực hành đạt được:**  
-  * Tạo và cấu hình tài khoản AWS Free Tier.  
-  * Cài đặt và cấu hình AWS CLI (Access Key, Secret Key, Default Region).  
-  * Sử dụng AWS CLI để:  
-    - Kiểm tra thông tin tài khoản & cấu hình  
-    - Lấy danh sách các vùng (regions)  
-    - Khởi chạy & giám sát EC2 instances  
-    - Quản lý key pairs và EBS volumes  
-  * Thực hành kết nối SSH vào EC2 và gắn thêm EBS volumes.  
-
-* **Các dịch vụ khác đã học:**  
-  * **Amazon Lightsail:** dịch vụ tính toán đơn giản, chi phí thấp, giá cố định theo tháng.  
-  * **AWS Application Migration Service (MGN):** công cụ replicate và di chuyển máy chủ on-premise sang AWS EC2 để phục vụ khôi phục thảm họa và migration.  
+* **Kỹ năng thực hành đạt được**:  
+  * **Lab 13 - AWS Backup:** Triển khai hạ tầng, tạo Backup Plan cho EC2 và EBS, test khôi phục dữ liệu từ backup.
+  * **Lab 24 - Storage Gateway:** Tạo S3 Bucket, triển khai EC2 cho Storage Gateway, cấu hình Storage Gateway và File Shares để kết nối lưu trữ on-premise với AWS.
+  * **Lab 57 - S3 Static Website:** Tạo S3 Bucket, upload dữ liệu, bật tính năng Static Website, cấu hình public access, tích hợp CloudFront để tăng tốc độ phân phối, bật Versioning và Replication multi-region.
 
 ---
 
-### Bài học rút ra:
+### Tóm tắt Tuần 3:
 
-* EC2 là nền tảng cốt lõi của dịch vụ Compute trên AWS, cung cấp sự linh hoạt trong triển khai và mở rộng.  
-* Cần hiểu rõ các tùy chọn lưu trữ (EBS, Instance Store, EFS, FSx) để cân bằng giữa chi phí, hiệu năng và tính bền vững.  
-* Auto Scaling đảm bảo tính sẵn sàng cao đồng thời tối ưu chi phí.  
-* Kết hợp AWS Console (giao diện web) và AWS CLI (dòng lệnh) mang lại khả năng quản trị linh hoạt và tự động hóa mạnh mẽ.  
+Tuần này tập trung vào các kiến thức cơ bản về AWS EC2 compute và các giải pháp lưu trữ. Bắt đầu với việc tìm hiểu EC2 Instance Types, AMI, Key Pairs, và các tùy chọn lưu trữ như EBS và Instance Store. Học về User Data để tự động hóa cấu hình instance và Metadata để lấy thông tin instance.
+
+Nghiên cứu EC2 Auto Scaling để tự động điều chỉnh dung lượng dựa trên nhu cầu, giúp tối ưu chi phí và đảm bảo tính sẵn sàng cao. Khám phá các dịch vụ bổ sung như EFS, FSx, Lightsail, và MGN.
+
+Kinh nghiệm thực hành chính bao gồm triển khai AWS Backup để tự động sao lưu và khôi phục tài nguyên EC2/EBS (Lab 13), cấu hình Storage Gateway để kết nối lưu trữ hybrid giữa on-premises và S3 (Lab 24), và tạo S3 Static Website với CloudFront distribution, versioning, và multi-region replication (Lab 57).
+
+Tuần học này cung cấp kiến thức thiết yếu về các dịch vụ compute và storage của AWS, chuẩn bị cho việc xây dựng các ứng dụng cloud có khả năng mở rộng, bền vững và tiết kiệm chi phí.
+
+---
+
+### Tài liệu tham khảo:
+
+**Bài Lab Workshop:**
+* **Lab 13 - Deploy AWS Backup:**  
+  https://000013.awsstudygroup.com/
+
+* **Lab 24 - Storage Gateway:**  
+  https://000024.awsstudygroup.com/
+
+* **Lab 57 - S3 Static Website với CloudFront:**  
+  https://000057.awsstudygroup.com/
+
+**Tài liệu chính thức AWS:**
+* **Hướng dẫn sử dụng Amazon EC2:**  
+  https://docs.aws.amazon.com/ec2/
+
+* **Các loại EC2 Instance:**  
+  https://aws.amazon.com/ec2/instance-types/
+
+* **Tài liệu Amazon EBS:**  
+  https://docs.aws.amazon.com/ebs/
+
+* **EC2 Auto Scaling:**  
+  https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html
+
+* **AWS Backup:**  
+  https://docs.aws.amazon.com/aws-backup/
+
+* **AWS Storage Gateway:**  
+  https://docs.aws.amazon.com/storagegateway/
+
+* **Amazon S3 Static Website Hosting:**  
+  https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html
+
+* **Amazon CloudFront:**  
+  https://docs.aws.amazon.com/cloudfront/
+
+* **Amazon EFS:**  
+  https://docs.aws.amazon.com/efs/
+
+* **Amazon FSx:**  
+  https://docs.aws.amazon.com/fsx/
+
+**Video hướng dẫn:**
+* **Hướng dẫn AWS EC2 đầy đủ:**  
+  https://www.youtube.com/watch?v=iHX-jtKIVNA
+
+* **Giải thích EC2 Auto Scaling:**  
+  https://www.youtube.com/watch?v=4EOaAkY4pNE
+
+* **Tổng quan dịch vụ AWS Storage:**  
+  https://www.youtube.com/watch?v=6vNC_BCqFmI
+
+* **S3 Static Website với CloudFront:**  
+  https://www.youtube.com/watch?v=mls8tiiI3uc
+
+**Tài nguyên bổ sung:**
+* **Công cụ tính giá EC2:**  
+  https://calculator.aws/
+
+* **AWS Well-Architected Framework:**  
+  https://aws.amazon.com/architecture/well-architected/
+
+* **AWS Skill Builder - Khóa học EC2:**  
+  https://explore.skillbuilder.aws/learn
+
+* **Best Practices cho EC2:**  
+  https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-best-practices.html
