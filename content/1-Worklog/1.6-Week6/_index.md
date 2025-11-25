@@ -5,53 +5,86 @@ weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 6 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Understand basic **database concepts** and the differences between relational and non-relational databases.
+* Learn about **Amazon RDS** (Relational Database Service) and **Amazon Aurora** for managed database solutions.
+* Explore **Amazon Redshift** for data warehousing and **Amazon ElastiCache** for in-memory caching.
+* Practice creating and configuring RDS instances with VPC, security groups, and subnet groups.
+* Deploy a simple application connecting to RDS and perform backup/restore operations.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+### Tasks Performed During the Week:
 
-### Week 6 Achievements:
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 1 | - Study **Database Concepts**: relational vs non-relational databases, ACID properties, and database use cases.<br>- Read documentation about different database types and when to use each. | 2025/10/13 | 2025/10/13 | [AWS Database Services Overview](https://aws.amazon.com/products/databases/) |
+| 2 | - Learn about **Amazon RDS & Amazon Aurora**: features, benefits, Multi-AZ deployments, and read replicas.<br>- Watch tutorial videos about RDS setup and configuration. | 2025/10/14 | 2025/10/14 | [Amazon RDS User Guide](https://docs.aws.amazon.com/rds/), [Amazon Aurora Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/) |
+| 3 | - Explore **Amazon Redshift** for data warehousing and **Amazon ElastiCache** for caching with Redis/Memcached.<br>- Compare use cases for different database services. | 2025/10/15 | 2025/10/15 | [Amazon Redshift Documentation](https://docs.aws.amazon.com/redshift/), [Amazon ElastiCache Documentation](https://docs.aws.amazon.com/elasticache/) |
+| 4 | **Lab05 - Part 1 (Lab05-2.1 to Lab05-2.4):**<br>- Lab05-2.1: Create VPC with CIDR 10.0.0.0/16<br>- Lab05-2.2: Create EC2 Security Group (allow SSH port 22, HTTP port 80)<br>- Lab05-2.3: Create RDS Security Group (allow MySQL port 3306 from EC2 SG)<br>- Lab05-2.4: Create DB Subnet Group with 2 subnets in different AZs | 2025/10/16 | 2025/10/16 | [Lab05-2.1 Create VPC](https://docs.aws.amazon.com/vpc/latest/userguide/create-vpc.html), [Lab05-2.2 EC2 Security Group](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html), [Lab05-2.3 RDS Security Group](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.RDSSecurityGroups.html), [Lab05-2.4 DB Subnet Group](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html#USER_VPC.Subnets) |
+| 5 | **Lab05 - Part 2 (Lab05-3 to Lab05-5):**<br>- Lab05-3: Create EC2 instance (Amazon Linux 2) in public subnet<br>- Lab05-4: Create RDS MySQL database instance (db.t3.micro)<br>- Lab05-5: Application Deployment - SSH to EC2, install MySQL client, deploy app and test RDS connection | 2025/10/17 | 2025/10/17 | [Lab05-3 Create EC2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html), [Lab05-4 Create RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.CreatingConnecting.MySQL.html), [Lab05-5 Deploy App](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ConnectToInstance.html) |
+| 6 | **Lab05 - Part 3 (Lab05-6 to Lab05-7):**<br>- Lab05-6: Backup and Restore - Create manual snapshot, modify automated backup retention, practice restore from snapshot<br>- Lab05-7: Clean up resources - Delete RDS instances, EC2, DB Subnet Group, Security Groups, VPC | 2025/10/18 | 2025/10/18 | [Lab05-6 Backup & Restore](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_CommonTasks.BackupRestore.html), [Lab05-7 Clean Up](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html) |
+| 7 | - Review database migration concepts: DMS (Database Migration Service), Schema Conversion Tool, and migration best practices.<br>- Study migration scenarios: homogeneous vs heterogeneous migrations. | 2025/10/19 | 2025/10/19 | [AWS Database Migration Service](https://docs.aws.amazon.com/dms/), [AWS Schema Conversion Tool](https://docs.aws.amazon.com/SchemaConversionTool/) |
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Successfully created and configured an AWS Free Tier account.
+### Weekly Achievements:
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Understood the fundamental differences between **relational databases** (SQL) and **non-relational databases** (NoSQL), and when to use each type.
+* Learned about **Amazon RDS** features:
+  * Managed database service supporting MySQL, PostgreSQL, MariaDB, Oracle, and SQL Server.
+  * **Multi-AZ deployment** for high availability and automatic failover.
+  * **Read replicas** for scaling read operations and improving performance.
+* Gained knowledge of **Amazon Aurora**:
+  * MySQL and PostgreSQL-compatible database with up to 5x performance improvement.
+  * Automatic storage scaling and distributed architecture for high availability.
+* Explored **Amazon Redshift** for data warehousing and analytics workloads, and **Amazon ElastiCache** for improving application performance with in-memory caching.
+* Successfully completed hands-on labs:
+  * Created VPC with proper network configuration for RDS deployment.
+  * Configured security groups to control access between EC2 and RDS instances.
+  * Deployed RDS database instance and connected it to an application running on EC2.
+  * Performed backup and restore operations to protect database data.
+* Gained overview of database migration tools and strategies for migrating databases to AWS.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+---
 
-* Used AWS CLI to perform basic operations such as:
+### Week 6 Summary:
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+In Week 6, I focused on **database services on AWS**, particularly **Amazon RDS** and related managed database solutions.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+Understanding the differences between relational and non-relational databases helped me choose the right database type for different application requirements. Through **Amazon RDS**, I learned how AWS simplifies database management by handling backups, patching, and high availability automatically.
+
+The hands-on labs were particularly valuable, as I practiced creating a complete database environment with VPC, security groups, and RDS instances. Deploying an application and connecting it to RDS gave me practical experience with real-world database scenarios.
+
+Learning about **Amazon Aurora**, **Redshift**, and **ElastiCache** expanded my understanding of specialized database services for different use cases – from high-performance transactional databases to data warehousing and caching solutions.
+
+This week's knowledge is essential for building **scalable, reliable, and well-architected database solutions on AWS**.
+
+---
+
+### Reference Materials:
+
+**Theory & Concepts:**
+* [AWS Database Services Overview](https://aws.amazon.com/products/databases/)
+* [Amazon RDS User Guide](https://docs.aws.amazon.com/rds/)
+* [Amazon Aurora Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/)
+* [Amazon Redshift Documentation](https://docs.aws.amazon.com/redshift/)
+* [Amazon ElastiCache Documentation](https://docs.aws.amazon.com/elasticache/)
+
+**Lab05 - RDS Hands-on Practice:**
+* [Lab05-2.1: Create VPC](https://docs.aws.amazon.com/vpc/latest/userguide/create-vpc.html)
+* [Lab05-2.2: Create EC2 Security Group](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html)
+* [Lab05-2.3: Create RDS Security Group](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.RDSSecurityGroups.html)
+* [Lab05-2.4: Create DB Subnet Group](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html#USER_VPC.Subnets)
+* [Lab05-3: Launch EC2 Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html)
+* [Lab05-4: Create RDS MySQL Database](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.CreatingConnecting.MySQL.html)
+* [Lab05-5: Connect to RDS from EC2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ConnectToInstance.html)
+* [Lab05-6: Backup and Restore RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_CommonTasks.BackupRestore.html)
+* [Lab05-7: Delete RDS Resources](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html)
+
+**Database Migration (Lab43 - Overview):**
+* [AWS Database Migration Service (DMS)](https://docs.aws.amazon.com/dms/)
+* [AWS Schema Conversion Tool (SCT)](https://docs.aws.amazon.com/SchemaConversionTool/)
+* [DMS Best Practices](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_BestPractices.html)
