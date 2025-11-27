@@ -27,7 +27,7 @@ pre: " <b> 4. </b> "
 &emsp;👤**Role:** Attendee
 
 ### [Event 3](4.3-Event3/)  
-&emsp;🏷️**Event Name:**  AI-Driven Development Life Cycle: Reimagining Software Engineering  
+&emsp;🏷️**Event Name:** AI/ML/GenAI on AWS Workshop 
 
 &emsp;⏰**Date & Time:** 14:00 – 16:30, Friday, October 3, 2025 
 
