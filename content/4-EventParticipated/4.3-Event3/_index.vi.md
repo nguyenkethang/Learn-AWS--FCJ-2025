@@ -6,9 +6,9 @@ chapter: false
 pre: " <b> 4.3. </b> "
 ---
 
-# Workshop AI/ML/GenAI trên AWS
+# 🤖 Workshop AI/ML/GenAI trên AWS
 
-### Mục Đích Workshop
+### 🎯 Mục Đích Workshop
 
 - Tìm hiểu thực trạng và xu hướng AI/ML cùng các dịch vụ AWS đang được ứng dụng tại thị trường Việt Nam
 - Thực hành quy trình machine learning toàn diện thông qua nền tảng Amazon SageMaker
@@ -16,12 +16,12 @@ pre: " <b> 4.3. </b> "
 - Rèn luyện kỹ năng prompt engineering và phương pháp RAG (Retrieval-Augmented Generation)
 - Phát triển các ứng dụng AI/ML có tính ứng dụng cao bằng công nghệ AWS
 
-### Thông Tin Sự Kiện
+### 📍 Thông Tin Sự Kiện
 
 - **Địa điểm**: Tầng 26, Tòa nhà Bitexco Financial Tower, số 2 đường Hải Triều, phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh
 - **Ngày & Giờ**: 8:30 sáng – 12:00 trưa, Thứ Bảy, ngày 15 tháng 11 năm 2025
 
-### Diễn Giả & Điều Phối Viên
+### 👨‍🏫 Diễn Giả & Điều Phối Viên
 
 **Giảng viên:**
 
@@ -34,18 +34,18 @@ pre: " <b> 4.3. </b> "
 - **AWS Vietnam Community Team**
 - **FCJ Program Leaders**
 
-### Nội Dung Chương Trình
+### 📋 Nội Dung Chương Trình
 
-#### 8:30 – 9:00 sáng: Khai Mạc & Làm Quen
+#### ⏰ 8:30 – 9:00 sáng: Khai Mạc & Làm Quen
 
 - Check-in và networking giữa các thành viên
 - Giới thiệu tổng quan về workshop cùng kỳ vọng đạt được
 - Hoạt động làm quen và tạo không khí thân thiện
 - Bức tranh tổng thể về AI/ML trong bối cảnh Việt Nam hiện nay
 
-#### 9:00 – 10:30 sáng: Khám Phá Hệ Sinh Thái AWS AI/ML
+#### ⏰ 9:00 – 10:30 sáng: Khám Phá Hệ Sinh Thái AWS AI/ML
 
-**Amazon SageMaker – Giải Pháp ML Toàn Diện**
+**🔬 Amazon SageMaker – Giải Pháp ML Toàn Diện**
 
 - **Xử Lý và Chuẩn Hóa Dữ Liệu**:
   - Sử dụng Data Wrangler để làm sạch và biến đổi dữ liệu
@@ -68,14 +68,14 @@ pre: " <b> 4.3. </b> "
   - Quy trình training một ML model
   - Deploy và test endpoint trong thực tế
 
-#### 10:30 – 10:45 sáng: Giải Lao
+#### ☕ 10:30 – 10:45 sáng: Giải Lao
 
 - Giao lưu và giải khát
 - Hỏi đáp với chuyên gia AWS
 
-#### 10:45 sáng – 12:00 trưa: Generative AI và Hệ Sinh Thái Dịch Vụ AI của AWS
+#### ⏰ 10:45 sáng – 12:00 trưa: Generative AI và Hệ Sinh Thái Dịch Vụ AI của AWS
 
-**Bộ Công Cụ AWS AI/ML**
+**🛠️ Bộ Công Cụ AWS AI/ML**
 
 - **Amazon Rekognition**: Phân tích và nhận diện hình ảnh/video thông minh
 - **Amazon Translate**: Dịch thuật đa ngôn ngữ với công nghệ neural network
@@ -87,7 +87,7 @@ pre: " <b> 4.3. </b> "
 - **Amazon Lookout**: Phát hiện bất thường trong dữ liệu vận hành
 - **Amazon Personalize**: Hệ thống gợi ý được cá nhân hóa
 
-**Các Mô Hình Nền Tảng: Claude, Llama, Titan**
+**🧠 Các Mô Hình Nền Tảng: Claude, Llama, Titan**
 
 - **Phân Tích và Lựa Chọn Model Phù Hợp**:
   - Claude (Anthropic): Xuất sắc trong hội thoại và xử lý logic phức tạp
@@ -95,7 +95,7 @@ pre: " <b> 4.3. </b> "
   - Titan (Amazon): Tối ưu chi phí, tích hợp sâu với AWS
   - Cách đánh giá và chọn model cho từng tình huống cụ thể
 
-**Nghệ Thuật Prompt Engineering**
+**✍️ Nghệ Thuật Prompt Engineering**
 
 - **Phương Pháp Viết Prompt Hiệu Quả**:
   - Đưa ra chỉ dẫn cụ thể và xây dựng context phù hợp
@@ -107,7 +107,7 @@ pre: " <b> 4.3. </b> "
   - Phân biệt system prompt và user prompt
   - Xây dựng template có thể tái sử dụng
 
-**Retrieval-Augmented Generation (RAG)**
+**🔗 Retrieval-Augmented Generation (RAG)**
 
 - **Cấu Trúc Hệ Thống RAG**:
   - Cơ sở dữ liệu vector và embedding representations
@@ -120,7 +120,7 @@ pre: " <b> 4.3. </b> "
   - Phương pháp chia nhỏ dữ liệu và tổ chức metadata
   - Bảo mật với S3 policies và kiểm soát truy cập
 
-**Amazon Bedrock Agent Core**
+**🤖 Amazon Bedrock Agent Core**
 
 - **Agent Orchestration**:
   - Bedrock Agent Core cho xây dựng AI agents tự động
@@ -132,14 +132,14 @@ pre: " <b> 4.3. </b> "
   - External API connections
   - Database queries và data retrieval
 
-**Guardrails: An Toàn và Lọc Nội Dung**
+**🛡️ Guardrails: An Toàn và Lọc Nội Dung**
 
 - Content moderation và phát hiện toxicity
 - Lọc PII (Personally Identifiable Information)
 - Lọc theo chủ đề và denied topics
 - Custom guardrails cho yêu cầu doanh nghiệp
 
-**Trình Diễn Trực Tiếp: Xây Dựng Chatbot Generative AI sử dụng Bedrock**
+**💻 Trình Diễn Trực Tiếp: Xây Dựng Chatbot Generative AI sử dụng Bedrock**
 
 - Thiết lập quyền truy cập Bedrock foundation model
 - Tạo chatbot đơn giản với prompt engineering
@@ -147,16 +147,16 @@ pre: " <b> 4.3. </b> "
 - Thêm guardrails cho phản hồi an toàn
 - Kiểm tra và cải tiến chatbot
 
-### Điểm Chính Rút Ra
+### 💡 Điểm Chính Rút Ra
 
-#### Khả Năng Amazon SageMaker
+#### 🔬 Khả Năng Amazon SageMaker
 
 - **Nền Tảng ML End-to-End**: SageMaker cung cấp tất cả công cụ cần thiết từ chuẩn bị dữ liệu đến triển khai model
 - **Tích Hợp MLOps**: Khả năng tích hợp sẵn cho tự động hóa và giám sát ML workflows
 - **Khả Năng Mở Rộng**: Dễ dàng scale từ thử nghiệm đến production workloads
 - **Tối Ưu Chi Phí**: Giá pay-as-you-go với tùy chọn spot instances và serverless inference
 
-#### Generative AI với Bedrock
+#### 🤖 Generative AI với Bedrock
 
 - **Đa Dạng Model**: Truy cập nhiều foundation models mà không cần quản lý infrastructure
 - **Prompt Engineering**: Kỹ năng quan trọng để có outputs chất lượng từ LLMs
@@ -164,7 +164,7 @@ pre: " <b> 4.3. </b> "
 - **An Toàn Trước Tiên**: Guardrails đảm bảo triển khai AI có trách nhiệm
 - **Khả Năng Agent**: Cho phép AI workflows phức tạp, nhiều bước
 
-#### Triển Khai Thực Tế
+#### 🚀 Triển Khai Thực Tế
 
 - **Bắt Đầu với Use Cases**: Xác định vấn đề kinh doanh cụ thể mà AI/ML có thể giải quyết
 - **Thử Nghiệm và Cải Tiến**: Sử dụng SageMaker Studio cho rapid prototyping
@@ -172,7 +172,7 @@ pre: " <b> 4.3. </b> "
 - **Triển Khai Guardrails**: Luôn ưu tiên an toàn và tuân thủ
 - **Giám Sát và Tối Ưu**: Liên tục theo dõi hiệu suất model và chi phí
 
-### Áp Dụng Vào Công Việc
+### 💼 Áp Dụng Vào Công Việc
 
 - **Khám Phá SageMaker**: Bắt đầu với SageMaker Studio free tier để thử nghiệm ML workflows
 - **Xây Dựng RAG Applications**: Triển khai knowledge base integration cho domain-specific chatbots
@@ -182,18 +182,18 @@ pre: " <b> 4.3. </b> "
 - **Đảm Bảo Tuân Thủ**: Sử dụng Bedrock Guardrails để đáp ứng yêu cầu quy định
 - **Chia Sẻ Kiến Thức**: Ghi chép learnings và best practices với nhóm của bạn
 
-### Những Trải Nghiệm Đáng Nhớ
+### ✨ Những Trải Nghiệm Đáng Nhớ
 
 Buổi **"Workshop AI/ML/GenAI trên AWS"** diễn ra tại văn phòng AWS Vietnam mang đến cơ hội tiếp cận trực tiếp với các công nghệ AI/ML hàng đầu. Những điểm nổi bật trong workshop:
 
-#### Tiếp Thu Kiến Thức Từ Chuyên Gia
+#### 👨‍🏫 Tiếp Thu Kiến Thức Từ Chuyên Gia
 
 - Các **Solutions Architects** chia sẻ kinh nghiệm thực chiến về quy trình ML hoàn chỉnh với SageMaker
 - **GenAI Specialists** mang đến những demo sinh động về Bedrock và các foundation models
 - Nghiên cứu các tình huống thực tế từ doanh nghiệp Việt Nam đang áp dụng AWS AI/ML
 - Tư vấn chi tiết về cách lựa chọn công nghệ và mô hình phù hợp với từng bài toán
 
-#### Thực Hành Và Demo Trực Tiếp
+#### 💻 Thực Hành Và Demo Trực Tiếp
 
 - Quan sát quy trình hoàn chỉnh trên **SageMaker Studio** từ data prep đến production
 - Trải nghiệm **Amazon Bedrock** giúp xây dựng GenAI apps nhanh chóng không cần lo về hạ tầng
@@ -201,21 +201,21 @@ Buổi **"Workshop AI/ML/GenAI trên AWS"** diễn ra tại văn phòng AWS Viet
 - Tìm hiểu **RAG architecture** để tạo AI applications có khả năng truy xuất tri thức
 - Khám phá cách **Bedrock Agents** tự động hóa các quy trình nhiều bước
 
-#### Nhận Thức Về Thị Trường AI/ML
+#### 📊 Nhận Thức Về Thị Trường AI/ML
 
 - Nắm bắt **xu hướng và tốc độ chuyển đổi AI/ML** đang diễn ra tại Việt Nam
 - Phân biệt rõ **traditional ML và Generative AI** - khi nào dùng cái gì
 - Hiểu rõ ranh giới giữa **SageMaker và Bedrock** để chọn đúng công cụ
 - Nhận ra vai trò then chốt của **MLOps** trong việc vận hành ML ở quy mô lớn
 
-#### Mở Rộng Mạng Lưới Chuyên Môn
+#### 🤝 Mở Rộng Mạng Lưới Chuyên Môn
 
 - Gặp gỡ cộng đồng developers và data scientists đam mê AWS AI/ML
 - Chia sẻ kinh nghiệm về những khó khăn và cách giải quyết khi triển khai AI/ML
 - Tạo dựng mối liên hệ với các chuyên gia AWS cho sự hỗ trợ lâu dài
 - Gia nhập cộng đồng AWS AI/ML để cập nhật kiến thức liên tục
 
-#### Bài Học Thực Tiễn Rút Ra
+#### 📚 Bài Học Thực Tiễn Rút Ra
 
 - **Foundation models** giúp mọi người tiếp cận AI mạnh mẽ mà không cần đầu tư khổng lồ
 - **Prompt engineering** là yếu tố quyết định chất lượng của ứng dụng GenAI
@@ -223,7 +223,7 @@ Buổi **"Workshop AI/ML/GenAI trên AWS"** diễn ra tại văn phòng AWS Viet
 - **Guardrails** không thể thiếu để đảm bảo AI được triển khai an toàn và đúng quy định
 - **SageMaker** là nền tảng all-in-one giúp đẩy nhanh toàn bộ chu trình ML
 
-#### Kế Hoạch Hành Động
+#### 🎯 Kế Hoạch Hành Động
 
 - Khởi đầu với **SageMaker Studio** free tier để làm quen với nền tảng
 - Phát triển **RAG application** demo sử dụng Bedrock Knowledge Bases
@@ -232,7 +232,7 @@ Buổi **"Workshop AI/ML/GenAI trên AWS"** diễn ra tại văn phòng AWS Viet
 - Áp dụng **MLOps practices** thông qua SageMaker Pipelines
 - Duy trì kết nối với **cộng đồng AWS AI/ML** để không ngừng học hỏi
 
-#### Một Số Hình Ảnh Sự Kiện
+#### 📸 Một Số Hình Ảnh Sự Kiện
 
 ![Buổi trình bày workshop](images/image1.jpg)
 <hr>
