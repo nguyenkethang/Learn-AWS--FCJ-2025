@@ -29,16 +29,16 @@ pre: " <b> 4. </b> "
 ### [Sự Kiện 3](4.3-Event3/)  
 &emsp;🏷️**Tên sự kiện:** AI-Driven Development Life Cycle: Reimagining Software Engineering  
 
-&emsp;⏰**Thời gian:** 8:30 sáng – 12:00 trưa, Thứ Bảy, ngày 15 tháng 11 năm 2025
+&emsp;⏰**Thời gian:** 8:30 Sáng – 12:00 Trưa, Thứ Bảy, ngày 15 tháng 11 năm 2025
 
 &emsp;📍**Địa điểm:** Tầng 26, Tòa nhà Bitexco Financial Tower, số 2 đường Hải Triều, phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh  
 
 &emsp;👤**Vai trò trong sự kiện:** Người tham dự
 
 ### [Sự Kiện 4](4.4-Event4/)  
-&emsp;🏷️**Tên sự kiện:** AI-Driven Development Life Cycle: Reimagining Software Engineering  
+&emsp;🏷️**Tên sự kiện:** DevOps on AWS Workshop  
 
-&emsp;⏰**Thời gian:** 14:00 – 16:30, Thứ Sáu ngày 3 tháng 10 năm 2025
+&emsp;⏰**Thời gian:**  8:30 Sáng – 5:00 Chiều, Thứ Hai, 17 tháng 11, 2025
 
 &emsp;📍**Địa điểm:** Tầng 26, Tòa nhà Bitexco Financial Tower, số 2 đường Hải Triều, phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh  
 
