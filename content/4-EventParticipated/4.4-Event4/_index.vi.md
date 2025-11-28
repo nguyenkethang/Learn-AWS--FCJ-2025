@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 4.4. </b> "
 ---
 
-# ⚙️ DevOps on AWS Workshop 
+# ⚙️ Workshop DevOps trên AWS
 
 ### 🎯 Mục tiêu Workshop
 
