@@ -9,7 +9,7 @@ pre: " <b> 4. </b> "
 ### [Sự Kiện 1](4.1-Event1/)  
 &emsp;🏷️**Tên sự kiện:** Kick-off AWS FCJ Workforce - FPTU OJT FALL 2025  
 
-&emsp;⏰**Thời gian:** Thứ Bảy, ngày 6 tháng 9 năm 2025, 8:30 Sáng – 12:00 Trưa  
+&emsp;⏰**Thời gian:** 8:30 Sáng – 12:00 Trưa, Thứ Bảy, ngày 6 tháng 9 năm 2025 
 
 &emsp;📍**Địa điểm:** Tầng 26, Tòa nhà Bitexco Financial Tower, số 2 đường Hải Triều, phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh  
 
@@ -20,7 +20,7 @@ pre: " <b> 4. </b> "
 ### [Sự Kiện 2](4.2-Event2/)  
 &emsp;🏷️**Tên sự kiện:** AI-Driven Development Life Cycle: Reimagining Software Engineering  
 
-&emsp;⏰**Thời gian:** 14:00 – 16:30, Thứ Sáu ngày 3 tháng 10 năm 2025
+&emsp;⏰**Thời gian:** 2:00 Chiều – 4:30 Chiều, Thứ Sáu ngày 3 tháng 10 năm 2025
 
 &emsp;📍**Địa điểm:** Tầng 26, Tòa nhà Bitexco Financial Tower, số 2 đường Hải Triều, phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh  
 
