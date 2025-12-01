@@ -1,89 +1,83 @@
 ---
-title: "Blog 1"
-date: 2025-04-30
+title: "Web Log 1"
+date: 2025-05-01
 weight: 1
 chapter: false
 pre: " <b> 3.1. </b> "
 ---
 
-# Hiển thị hiệu suất mạng cho workload trên AWS với Network Flow Monitor
+# Announcing 194 New Partners Achieving AWS Competency, Service Delivery, Service Ready, and MSP Designations in April
 
-**Tác giả:** Hiroki Fujii và Vishwas Puttasubbappa  
-**Ngày xuất bản:** 30 THÁNG 4 năm 2025  
-**Danh mục:** Amazon CloudWatch, Amazon VPC, Announcements, Monitoring and observability, Networking & Content Delivery
-
----
-
-## Giới thiệu
-
-AWS đã ra mắt **Network Flow Monitor** tại re:Invent vào ngày 1 tháng 12 năm 2024, một tính năng mới trong bộ **Amazon CloudWatch Network Monitoring**, cung cấp khả năng giám sát hiệu suất mạng trên các dịch vụ do AWS quản lý. 
-
-Với Network Flow Monitor, bạn có thể có được khả năng hiển thị gần như thời gian thực về lưu lượng mạng giữa các tài nguyên tính toán (Amazon Elastic Compute Cloud (Amazon EC2) và Amazon Elastic Kubernetes Service (Amazon EKS)) và các dịch vụ của AWS, chẳng hạn như Amazon S3 và Amazon DynamoDB, cũng như cơ sở hạ tầng của AWS. 
-
-Dữ liệu thu thập này có thể giúp bạn xác định và giải quyết các vấn đề mạng cho ứng dụng của mình nhanh hơn bằng cách giảm thời gian khắc phục sự cố cho môi trường đám mây của bạn.
+**Author:** Nick Paris  
+**Published:** 2025/05/01  
+**Category:** Announcements, APN Launches, AWS Partner Network  
 
 ---
 
-## Các thách thức về khả năng quan sát với mạng đám mây
+## Introduction
 
-Khi các ứng dụng gặp độ trễ cao, các vấn đề về mạng thường là nguyên nhân bị nghi ngờ đầu tiên, dù là trong môi trường đám mây hay tại chỗ. Như nhiều người trong số các bạn có thể đã biết, các công cụ giám sát mạng truyền thống cung cấp khả năng hiển thị hạn chế đối với cơ sở hạ tầng mạng AWS và hiệu suất mạng giữa các dịch vụ được quản lý của AWS. 
+Written by **Nick Paris**, Director of APN Marketing – AWS Partner Network.
 
-Điều này có thể kéo dài quy trình khắc phục sự cố và ảnh hưởng đến cả **thời gian trung bình để phát hiện (MTTD)** và **thời gian trung bình để phục hồi (MTTR)**
+The **AWS Partner Network (APN)** is a global community leveraging **Amazon Web Services (AWS)** technologies, programs, expertise, and tools to build solutions and deliver services to customers.
+
+APN has over **130,000 partners** from more than **200 countries**, with **70% headquartered outside the United States**. Together, partners and AWS deliver innovative solutions, solve technical challenges, win contracts, and bring greater value to customers.
+
+To achieve APN designations such as **AWS Competency**, **AWS Service Delivery**, **AWS Service Ready**, and **AWS Managed Service Provider (MSP)**, organizations must undergo rigorous technical validation and assessment processes.
 
 ---
 
 ## 🆕 AWS Competency Partners
 
-To successfully adopt cloud in today’s complex IT environments, customers can collaborate with **AWS Competency Partners**.
+To succeed in cloud adoption in today's complex IT environments, customers can partner with **AWS Competency Partners**.
 
-This program validates and promotes partners who demonstrate **deep technical expertise** and **proven customer success** in specific solution areas. Guidance from these experts helps businesses achieve **better and more efficient outcomes**.
+This program validates and promotes partners with **deep technical expertise** and **proven success** through real-world projects. Guidance from these experts helps businesses achieve **better and more efficient results**.
 
 ![AWS Competency Partners Overview](images/image1.png)
 
 ### 🔹 New Partners
 
-#### **AWS Competency in Advertising & Marketing Technology**
+#### **AWS Advertising and Marketing Technology Competency**
 - Anzu.io | EMEA | Advertising Platform; Digital Customer Experience
 
-#### **AWS Competency in Cloud Operations**
+#### **AWS Cloud Operations Competency**
 - avvale | EMEA | Cloud Financial Management  
 - Qucoon | EMEA | Cloud Governance  
 - Select Soluções | LATAM | Cloud Financial Management  
 - ControlMonkey | EMEA | Cloud Governance; Operations Management  
 
-#### **Competency in Consumer Packaged Goods**
+#### **Consumer Goods Competency**
 - AssetWatch | NAMER | Manufacturing  
 - Cloudinary | NAMER | Marketing  
 
-#### **AWS Competency in Cyber Insurance**
-- Measured Analytics and Insurance | NAMER | Cybersecurity Insurance  
+#### **AWS Cyber Insurance Competency**
+- Measured Analytics and Insurance | NAMER | Cyber Insurance  
 
-#### **AWS Competency in Data & Analytics**
+#### **AWS Data & Analytics Competency**
 - Ankercloud | EMEA | Consulting Services  
 - Trianz | NAMER | Consulting Services  
 
-#### **AWS Competency in DevOps**
+#### **AWS DevOps Competency**
 - Syntax Systems | NAMER | Consulting Services  
 
-#### **AWS Competency in Digital Workplace**
+#### **AWS Digital Workplace Competency**
 - LCM Go Cloud | EMEA | Consulting Services  
 - Celoxis Technologies | APAC | Collaboration Platform  
 
-#### **AWS Competency in Education**
+#### **AWS Education Competency**
 - CloudiQS | EMEA | Consulting Services  
 - CloudThat | APAC | Consulting Services  
-- Wiz | NAMER | Administration & Operations  
-- Zscaler | NAMER | Administration & Operations  
+- Wiz | NAMER | Administration and Operations  
+- Zscaler | NAMER | Administration and Operations  
 
-#### **Competency in Energy & Utilities**
+#### **Energy & Utilities Competency**
 - Innovapptive | NAMER | Downstream; Midstream; Upstream  
-- Schlumberger | NAMER | Data Analytics & Insights; Upstream  
+- Schlumberger | NAMER | Data Analytics and Insights; Upstream  
 
-#### **AWS Competency in Financial Services**
+#### **AWS Financial Services Competency**
 - Blend | NAMER | Consulting Services  
 - Kyriba | EMEA | Capital Markets  
 
-#### **AWS Competency in Generative AI**
+#### **AWS Generative AI Competency**
 - 上海南洋万邦软件技术有限公司 – Nanyang Softland | China | Consulting Services  
 - ARKHO | LATAM | Consulting Services  
 - Beijing Yun Shi Shu Ju Technology | China | Consulting Services  
@@ -101,75 +95,75 @@ This program validates and promotes partners who demonstrate **deep technical ex
 - SoftwareOne | EMEA | Consulting Services  
 - Source Allies, Inc | NAMER | Consulting Services  
 - 特赞（上海）信息科技有限公司 | China | Generative AI Applications  
-- Articul8 AI | NAMER | Foundation Model & Application Development; Generative AI Applications; Infrastructure & Data  
+- Articul8 AI | NAMER | Foundation Model and Application Development; Generative AI Applications; Infrastructure and Data  
 - Feenix.ai | NAMER | Generative AI Applications  
 - Informatica | NAMER | Generative AI Applications  
 - Vody.com | NAMER | Generative AI Applications  
 
-#### **AWS Competency in Government**
+#### **AWS Government Competency**
 - Inflectra Corporation | NAMER | Citizen Services  
 - Over-C | EMEA | Citizen Services  
-- SentinelOne | NAMER | Government Technology & Tools  
+- SentinelOne | NAMER | Government Technology and Tools  
 
-#### **AWS Competency in Healthcare**
+#### **AWS Healthcare Competency**
 - BioT Medical | EMEA | Clinical Information Systems; Compliance Services; Healthcare Management; Population Health & Analytics  
 - Wiz | NAMER | Compliance Services  
 
-#### **AWS Competency in High Performance Computing (HPC)**
+#### **AWS High Performance Computing (HPC) Competency**
 - Fovus | NAMER | HPC Management  
 
 #### **AWS Level 1 MSSP Competency**
 - Comprinno Technologies | APAC | Level 1 Managed Security Services  
 
-#### **AWS Competency in Machine Learning**
+#### **AWS Machine Learning Competency**
 - Impetus Technologies | NAMER | Consulting Services  
 
-#### **AWS Competency in Mainframe Modernization**
+#### **AWS Mainframe Modernization Competency**
 - Slalom | NAMER | Mainframe Workloads  
 
-#### **AWS Competency in Manufacturing & Industrial**
+#### **AWS Manufacturing and Industrial Competency**
 - Cognizant | NAMER | Enterprise Solutions; Operations Technology; Smart Manufacturing; Supply Chain Management  
 
-#### **AWS Competency in Media & Entertainment**
-- AppEvolve | NAMER | Broadcast; Direct-to-Consumer  
-- DataArt | NAMER | Media Supply Chain & Archive  
+#### **AWS Media & Entertainment Competency**
+- AppEvolve | NAMER | Broadcast; Direct to Consumer  
+- DataArt | NAMER | Media Supply Chain and Archive  
 
-#### **AWS Competency in Migration & Modernization**
+#### **AWS Migration and Modernization Competency**
 - Almaviva | EMEA | Migration Services  
 - Bespin Global | APAC | Modernization Services  
 - ForceOne | LATAM | Migration Services  
 - TrueMark Technologies | NAMER | Migration Services  
 
-#### **AWS Competency in Networking**
+#### **AWS Networking Competency**
 - Fortinet | NAMER | Consulting Services  
 - Qucoon | EMEA | Consulting Services  
 
-#### **AWS Competency in Nonprofit**
+#### **AWS Nonprofit Competency**
 - Acloud Co. | APAC | Consulting Services  
 - Incline-IT (MIS Group) | EMEA | Consulting Services  
 - Quantiphi | NAMER | Consulting Services  
 
-#### **AWS Competency in Oracle**
+#### **AWS Oracle Competency**
 - SYSTEX RAINBOW TECH CO | China | Consulting Services  
 
-#### **AWS Competency in Resilience**
+#### **AWS Resilience Competency**
 - bestcloudfor.me | EMEA | Core Resilience; Resilience Design; Resilience Operations; Disaster Recovery  
 - Dedicatted | NAMER | Core Resilience; Resilience Design  
 
-#### **AWS Competency in Retail**
+#### **AWS Retail Competency**
 - Kyndryl | NAMER | Consulting Services  
 - Oneture Technologies | APAC | Consulting Services  
 - Tredence | NAMER | Consulting Services  
-- Netop | EMEA | Core IT & Applications  
-- Spectro Cloud | NAMER | Core IT & Applications  
+- Netop | EMEA | Core IT and Applications  
+- Spectro Cloud | NAMER | Core IT and Applications  
 
-#### **AWS Competency in SaaS**
+#### **AWS SaaS Competency**
 - MethodData | NAMER | Builder; Design Services  
 
-#### **AWS Competency in Security**
-- RISCPoint | NAMER | Compliance & Privacy  
+#### **AWS Security Competency**
+- RISCPoint | NAMER | Compliance and Privacy  
 
-#### **AWS Competency in Small and Medium Business (SMB)**
+#### **AWS Small and Medium Business (SMB) Competency**
 - 神灏（北京）云计算科技有限公司 | China | Small and Medium Business  
 - 北京聚云立方科技有限公司（Marshotspot limited) | China | Small and Medium Business  
 - Chunghwa Telecom | China | Small and Medium Business  
@@ -179,27 +173,27 @@ This program validates and promotes partners who demonstrate **deep technical ex
 - Nub8 | NAMER | Small and Medium Business  
 - Trek10 | NAMER | Small and Medium Business  
 
-#### **AWS Competency in Storage**
+#### **AWS Storage Competency**
 - ECLOUDVALLEY TECHNOLOGY | APAC | Consulting Services  
 - Effectual | NAMER | Consulting Services  
 - Kyndryl | NAMER | Consulting Services  
 
-#### **AWS Competency in Travel & Hospitality**
-- DataDome | EMEA | Core Applications; Digital Customer Engagement
+#### **AWS Travel and Hospitality Competency**
+- DataDome | EMEA | Core Applications; Digital Customer Engagement  
 
 ---
 
 ## 🆕 AWS Managed Service Providers (MSP)
 
-The **AWS Managed Service Provider (MSP)** program validates partners with **extensive experience delivering comprehensive AWS solutions**, including:
+The **AWS Managed Service Provider (MSP)** program validates partners with **experience delivering comprehensive AWS solutions**, including:
 - Planning and design  
 - Build and migration  
-- Operation and support  
+- Operations and support  
 - Automation and optimization  
 
 ![AWS Managed Service Providers](images/image2.png)
 
-### **Newest MSP Partners**
+### **Latest MSP Partners**
 - Dedicatted | NAMER  
 - Genpact | NAMER  
 - Globant | LATAM  
@@ -212,17 +206,17 @@ The **AWS Service Ready** program validates software products built by AWS Partn
 
 ![AWS Service Ready Products](images/image3.png)
 
-### **Newest Products**
+### **Latest Products**
 
-#### **Amazon CloudFront Ready Products**
+#### **Amazon CloudFront Compatible Products**
 - 北京智齿博创科技有限公司 | China | Media Management; Monitoring & Analytics; Security  
 - UDS | LATAM | Media Management  
 
-#### **Amazon Linux Ready Products**
+#### **Amazon Linux Compatible Products**
 - Cloudpense | China | Amazon Linux 2  
 - Tacnode | NAMER | Amazon Linux 2022  
 
-#### **Amazon RDS Ready Products (Business Applications & Tools)**
+#### **Amazon RDS Compatible Products (Business Applications & Tools)**
 - 太美医疗科技 | China | Business Applications  
 - 福州领克狐科技有限公司 | China | Business Applications  
 - iPinYou Inc | China | Business Applications  
@@ -239,7 +233,7 @@ The **AWS Service Delivery** program validates AWS Partners with **deep technica
 
 ![AWS Service Delivery Partners](images/image4.png)
 
-### **Newest Partners:**
+### **Latest Partners:**
 
 #### **Amazon API Gateway Delivery Partners**
 - ADAPTURE Technology Group | NAMER  
@@ -387,15 +381,17 @@ The **AWS Service Delivery** program validates AWS Partners with **deep technica
 
 ![AWS Partner Value Proposition](images/image5.png)
 
-AWS’s mission is to make **APN** and the **AWS Marketplace** the **preferred go-to-market path** that helps partners:
+AWS's mission is to make **APN** and **AWS Marketplace** the **preferred go-to-market path**, helping partners:
 - Increase profitability  
-- Win more deals  
+- Win more contracts  
 - Scale faster  
 
-AWS is enhancing the **AWS Partner experience** to provide more relevant, consistent, and predictable guidance.  
-**Your profitability and your customers’ success** are our top priorities.
+AWS is improving the **AWS Partner experience** to provide more relevant, consistent, and predictable guidance.  
 
-In 2025, AWS will continue to provide a proven success path that helps partners **drive greater customer value and profitability**.  
-The journey ahead is exciting — and we’re thrilled to be part of it with you!
+**Your profitability and customer success** are our number one goals.
+
+In 2025, AWS will continue to provide a proven success roadmap, helping partners **drive customer value and greater profitability**.  
+
+The journey ahead is exciting — and we're thrilled to be on this journey with you!
 
 ---
