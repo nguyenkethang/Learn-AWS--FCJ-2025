@@ -1,5 +1,5 @@
 ---
-title: "Web Log 1"
+title: "BLog 1"
 date: 2025-05-01
 weight: 1
 chapter: false
