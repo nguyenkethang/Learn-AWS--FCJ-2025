@@ -45,9 +45,9 @@ pre: " <b> 4. </b> "
 &emsp;👤**Role:** Attendee
 
 ### [Event 5](4.5-Event5/)  
-&emsp;🏷️**Event Name:**  AI-Driven Development Life Cycle: Reimagining Software Engineering  
+&emsp;🏷️**Event Name:**  AWS WELL-ARCHITECTED SECURITY PILLAR WORKSHOP – MORNING SESSION 
 
-&emsp;⏰**Date & Time:** 14:00 – 16:30, Friday, October 3, 2025 
+&emsp;⏰**Date & Time:** 08:30 AM – 12:00 PM, Saturday, November 29, 2025 
 
 &emsp;📍**Location:** 26th Floor, Bitexco Financial Tower, 2 Hai Trieu Street, Ben Nghe Ward, District 1, Ho Chi Minh City  
 
