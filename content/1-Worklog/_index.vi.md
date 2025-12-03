@@ -20,7 +20,7 @@ pre: " <b> 1. </b> "
 
 **Tuần 7:** [Học về AWS Database & Analytics: DynamoDB, Kinesis, Glue, Athena và QuickSight.](1.7-week7/)
 
-**Tuần 8:** [Làm công việc H...](1.8-week8/)
+**Tuần 8:** [Hoàn thành đề xuất dự án BDSS với thiết kế kiến trúc AWS 3 tầng, yêu cầu kỹ thuật và ước tính ngân sách.](1.8-week8/)
 
 **Tuần 9:** [Làm công việc I...](1.9-week9/)
 

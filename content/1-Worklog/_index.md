@@ -20,7 +20,7 @@ pre: " <b> 1. </b> "
 
 **Week 7:** [Learned AWS Database & Analytics: DynamoDB, Kinesis, Glue, Athena and QuickSight.](1.7-week7/)
 
-**Week 8:** [Doing task H...](1.8-week8/)
+**Week 8:** [Completed BDSS project proposal with AWS 3-tier architecture design, technical requirements, and budget estimation.](1.8-week8/)
 
 **Week 9:** [Doing task I...](1.9-week9/)
 
