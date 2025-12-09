@@ -1,12 +1,14 @@
----
-title: "Bản đề xuất"
-date: 2025-09-15
+﻿---
+title: "Đề xuất dự án"
+date: 2025-09-10
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
 
 # Blood Donation Support System (BDSS)
+
+📄 **[Tải Tài Liệu Đề Xuất Đầy Đủ (Word)](Proposal%20Template.docx)**
 
 ## 1. Tóm tắt điều hành
 
@@ -19,14 +21,17 @@ Hệ thống được xây dựng trên **kiến trúc AWS Cloud**, sử dụng 
 ## 2. Tuyên bố vấn đề
 
 ### Vấn đề hiện tại:
+
 Các cơ sở y tế hiện đang quản lý quy trình hiến máu thủ công hoặc thông qua các công cụ rời rạc. Việc tìm kiếm người hiến máu phù hợp nhóm máu hoặc theo khu vực gặp khó khăn, đặc biệt trong tình huống khẩn cấp. Ngoài ra, hệ thống lưu trữ dữ liệu chưa đồng bộ, gây khó khăn trong việc phân tích, báo cáo và tối ưu chiến dịch hiến máu.
 
 ### Giải pháp đề xuất:
+
 Phát triển **nền tảng hỗ trợ hiến máu toàn diện trên AWS Cloud**, với các chức năng quản lý hiến máu, tìm kiếm người hiến và người cần máu theo nhóm máu hoặc vị trí địa lý, tích hợp xác thực người dùng qua Amazon Cognito và quản trị dữ liệu trên Amazon RDS.
 
 Frontend được triển khai qua **Route 53 + CloudFront**, backend thông qua **API Gateway – EC2**, cơ sở dữ liệu MySQL trên **Amazon RDS**, và pipeline tự động CI/CD bằng **GitLab – CodePipeline**.
 
 ### Lợi ích và ROI:
+
 - Giảm 60–70% thời gian tìm kiếm người hiến máu phù hợp.
 - Tăng độ chính xác thông tin nhóm máu và vị trí.
 - Tối ưu chi phí vận hành với kiến trúc cloud linh hoạt, trả phí theo mức sử dụng.
@@ -37,17 +42,20 @@ Frontend được triển khai qua **Route 53 + CloudFront**, backend thông qua
 ## 3. Kiến trúc giải pháp
 
 ### Kiến trúc tổng thể:
-![AWS Blood Donation Architecture](images/image.png)
+
+![AWS Blood Donation Architecture](AWS%20architecture%20diagrams%20blood%20donation%20support%20systems.png)
 
 Hệ thống được thiết kế theo kiến trúc **3-tier trên AWS Cloud** với các thành phần chính:
 
 ### 1. Frontend & Content Delivery Layer:
+
 - **Users**: Người dùng truy cập hệ thống qua trình duyệt web hoặc mobile.
 - **Route 53**: Dịch vụ DNS quản lý domain name và routing traffic đến CloudFront.
 - **CloudFront**: CDN phân phối nội dung tĩnh với độ trễ thấp, cache tại edge locations.
 - **Amazon S3**: Lưu trữ static assets (HTML, CSS, JS, images) cho frontend application.
 
 ### 2. Application & Compute Layer:
+
 - **API Gateway**: REST API endpoint, xử lý request/response giữa frontend và backend.
 - **VPC (Virtual Private Cloud)**: Mạng riêng ảo cô lập với cấu hình:
   - **Internet Gateway**: Cho phép public subnet kết nối Internet.
@@ -58,12 +66,14 @@ Hệ thống được thiết kế theo kiến trúc **3-tier trên AWS Cloud** 
 - **Amazon RDS (MySQL)**: Relational database lưu trữ dữ liệu người hiến máu, nhóm máu, lịch sử hiến máu.
 
 ### 3. CI/CD & DevOps Pipeline:
+
 - **GitLab**: Source code repository và version control.
 - **AWS CodePipeline**: Orchestrate CI/CD workflow tự động.
 - **AWS CodeBuild**: Build và test code trước khi deploy.
 - **Automated Deployment**: Tự động deploy lên EC2 khi có code changes.
 
 ### 4. Monitoring, Security & Management Layer:
+
 - **Amazon Cognito**: User authentication và authorization (Guest, Member, Staff, Admin roles).
 - **AWS IAM**: Quản lý quyền truy cập cho users và services.
 - **AWS Secrets Manager**: Lưu trữ an toàn database credentials và API keys.
@@ -73,6 +83,7 @@ Hệ thống được thiết kế theo kiến trúc **3-tier trên AWS Cloud** 
 - **Amazon SNS**: Gửi notifications (email/SMS) khi có sự kiện quan trọng (máu khẩn cấp, người hiến phù hợp).
 
 ### Luồng hoạt động của hệ thống:
+
 1. **User Access**: Users → Route 53 → CloudFront → S3 (Frontend)
 2. **API Requests**: Frontend → API Gateway → EC2 (Backend) → RDS (Database)
 3. **Data Flow**: EC2 instances trong public subnet kết nối với RDS trong private subnet
@@ -87,19 +98,24 @@ Hệ thống được thiết kế theo kiến trúc **3-tier trên AWS Cloud** 
 ### Các giai đoạn triển khai:
 
 #### 1. Phân tích & thiết kế (Tháng 1)
+
 - Thu thập yêu cầu, xác định use case, thiết kế ERD và kiến trúc AWS.
 
 #### 2. Thiết lập hạ tầng & pipeline (Tháng 2)
+
 - Cấu hình Route 53, CloudFront, EC2, RDS và CI/CD trên AWS.
 
 #### 3. Phát triển & kiểm thử (Tháng 3–4)
+
 - Xây dựng các module chính: đăng ký hiến máu, tìm kiếm, quản lý kho máu.
 - Tích hợp Cognito và hệ thống cảnh báo SNS.
 
 #### 4. Triển khai & vận hành (Tháng 5)
+
 - Triển khai sản phẩm chính thức và giám sát bằng CloudWatch.
 
 ### Yêu cầu kỹ thuật chính:
+
 - **Frontend:** React/Next.js hoặc Angular (deploy qua S3/CloudFront).
 - **Backend:** Node.js/Express trên EC2, giao tiếp qua REST API Gateway.
 - **Database:** Amazon RDS MySQL, tối ưu query và backup định kỳ.
@@ -124,7 +140,7 @@ Hệ thống được thiết kế theo kiến trúc **3-tier trên AWS Cloud** 
 
 | Dịch vụ                         | Ước tính chi phí/tháng (USD) | Ghi chú              |
 | ------------------------------- | ---------------------------- | -------------------- |
-| EC2 (t2.micro)                  | 3.50                         | Backend REST API     |
+| EC2 (t3.nano)                   | 3.50                         | Backend REST API     |
 | Amazon RDS (MySQL)              | 2.80                         | 20 GB storage        |
 | API Gateway                     | 0.50                         | 5.000 request        |
 | CloudFront + S3                 | 0.80                         | Website + CDN        |
