@@ -1,31 +1,98 @@
----
+﻿---
 title: "Workshop"
-date: 2025-09-15
+date: 2025-12-08
 weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# Secure Hybrid Access to S3 using VPC Endpoints
+# Deploy DNA Analysis Application on AWS
 
 #### Overview
 
-**AWS PrivateLink** provides private connectivity to AWS services from VPCs and your on-premises networks, without exposing your traffic to the Public Internet.
+In this workshop, you will learn how to deploy a production-ready full-stack DNA Analysis application on AWS using Infrastructure as Code (IaC) with CloudFormation. The application consists of a React frontend, Spring Boot backend, and MySQL database, all deployed with AWS best practices for security, scalability, and cost optimization.
 
-In this lab, you will learn how to create, configure, and test VPC endpoints that enable your workloads to reach AWS services without traversing the Public Internet.
+**AWS Services Used:**
+- **VPC & Networking**: VPC, Subnets, Internet Gateway, NAT Gateway, VPC Endpoints
+- **Compute**: EC2 Auto Scaling Group, Application Load Balancer
+- **Storage & CDN**: S3 for frontend hosting, CloudFront for global content delivery
+- **Database**: RDS MySQL for data persistence with automated backups
+- **Security**: Security Groups, IAM Roles, AWS Cognito for user authentication
+- **Monitoring**: CloudWatch Logs, Alarms, and SNS notifications
+- **API Management**: API Gateway for secure backend API exposure
 
-You will create two types of endpoints to access Amazon S3: a Gateway VPC endpoint, and an Interface VPC endpoint. These two types of VPC endpoints offer different benefits depending on if you are accessing Amazon S3 from the cloud or your on-premises location
-+ **Gateway** - Create a gateway endpoint to send traffic to Amazon S3 or DynamoDB using private IP addresses.You route traffic from your VPC to the gateway endpoint using route tables.
-+ **Interface** - Create an interface endpoint to send traffic to endpoint services that use a Network Load Balancer to distribute traffic. Traffic destined for the endpoint service is resolved using DNS.
+#### What You Will Learn
+
+1. **Infrastructure as Code**: Deploy complete AWS infrastructure using CloudFormation templates
+2. **VPC Design**: Create a secure VPC with public and private subnets across multiple availability zones
+3. **Cost Optimization**: Use VPC Endpoints to reduce NAT Gateway costs (~$20-25/month savings)
+4. **Auto Scaling**: Configure EC2 Auto Scaling based on CPU metrics for high availability
+5. **Database Management**: Deploy and configure RDS MySQL with security best practices
+6. **Frontend Deployment**: Host static React website on S3 with CloudFront CDN
+7. **Backend Deployment**: Deploy Spring Boot application on EC2 with systemd service
+8. **Security Best Practices**: Implement security groups, IAM roles, and Cognito authentication
+9. **Monitoring & Logging**: Set up CloudWatch for application monitoring and alerting
+
+#### Architecture Diagram
+
+```
+Internet
+    │
+    ├─── CloudFront (CDN) ──> S3 (Frontend)
+    │
+    └─── API Gateway ──> ALB ──> EC2 (Backend) ──> RDS MySQL
+                                  │
+                                  └─── VPC Endpoints (S3, CloudWatch, SSM)
+```
+
+#### Prerequisites
+
+- AWS Account with appropriate permissions (Administrator or equivalent)
+- AWS CLI installed and configured (`aws configure`)
+- EC2 Key Pair created in your AWS region (ap-southeast-1)
+- Basic understanding of AWS services and command line interface
+- Familiarity with CloudFormation concepts
+
+#### Estimated Cost
+
+Running this workshop infrastructure will cost approximately **$8.90/month** (if running 24/7):
+
+| Service | Instance Type | Cost/month (USD) |
+|---------|---------------|------------------|
+| EC2 | t3.nano | $3.50 |
+| RDS MySQL | db.t3.micro | $2.80 |
+| API Gateway | - | $0.50 |
+| S3 + CloudFront | - | $0.80 |
+| Route 53 | - | $0.50 |
+| Cognito | - | $0.10 |
+| CloudWatch | - | $0.30 |
+| CI/CD (CodePipeline) | - | $0.40 |
+| **Total** | | **$8.90** |
+
+**For workshop (2-3 hours):** ~$0.50-1.00
+
+**💡 Cost Saving Tips:**
+- Delete the stack immediately after workshop completion
+- Use AWS Free Tier for eligible services
+- Disable NAT Gateway when not in use (saves ~$32/month)
+- Use VPC Endpoints instead of NAT Gateway for production
+
+#### Workshop Duration
+
+- **Total Time**: 2-3 hours
+- **Infrastructure Deployment**: 15-20 minutes
+- **Application Configuration**: 30-45 minutes
+- **Testing & Validation**: 15-30 minutes
+- **Cleanup**: 5-10 minutes
 
 #### Content
 
-1. [Workshop overview](5.1-Workshop-overview)
-2. [Prerequiste](5.2-Prerequiste/)
-3. [Access S3 from VPC](5.3-S3-vpc/)
-4. [Access S3 from On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (Bonus)](5.5-Policy/)
-6. [Clean up](5.6-Cleanup/)
+1. [Workshop Overview](5.1-workshop-overview/)
+2. [Prerequisites & Preparation](5.2-prerequisite/)
+3. [Deploy Infrastructure with CloudFormation](5.3-deploy-infrastructure/)
+4. [Configure and Deploy Backend Application](5.4-deploy-backend/)
+5. [Deploy Frontend to S3 and CloudFront](5.5-deploy-frontend/)
+6. [Testing and Validation](5.6-testing/)
+7. [Monitoring and Troubleshooting](5.7-monitoring/)
+8. [Clean Up Resources](5.8-cleanup/)
+

@@ -1,13 +1,14 @@
 ---
 title : "Các bước chuẩn bị"
-date :  2025-09-15 
+date: 2025-09-09
 weight : 2
 chapter : false
 pre : " <b> 5.2. </b> "
 ---
-
 #### IAM permissions
+
 Gắn IAM permission policy sau vào tài khoản aws user của bạn để triển khai và dọn dẹp tài nguyên trong workshop này.
+
 ```
 {
     "Version": "2012-10-17",
@@ -224,7 +225,7 @@ Trong lab này, chúng ta sẽ dùng N.Virginia region (us-east-1).
 
 ![create stack](/images/5-Workshop/5.2-Prerequisite/create-stack1.png)
 
-+ Lựa chọn 2 mục acknowledgement 
++ Lựa chọn 2 mục acknowledgement
 + Chọn Create stack
 
 ![create stack](/images/5-Workshop/5.2-Prerequisite/create-stack2.png)
