@@ -26,6 +26,6 @@ pre: " <b> 1. </b> "
 
 **Week 10:** [Deployed React frontend to S3/CloudFront, implemented comprehensive testing, CloudWatch monitoring, and VPC Endpoints cost optimization.](1.10-week10/)
 
-**Week 11:** [Doing task M...](1.11-week11/)
+**Week 11:** [Researched and planned DNA Analysis application deployment: designed VPC architecture, built CloudFormation template (1,393 lines), analyzed cost optimization with VPC Endpoints, and created detailed deployment roadmap.](1.11-week11/)
 
-**Week 12:** [Doing task N...](1.12-week12/)
+**Week 12:** [Deployed complete AWS infrastructure (52 resources), Spring Boot backend on EC2, React frontend on S3/CloudFront, implemented comprehensive testing, CloudWatch monitoring, and VPC Endpoints achieving 27% cost savings.](1.12-week12/)

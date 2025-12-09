@@ -26,6 +26,6 @@ pre: " <b> 1. </b> "
 
 **Tuần 10:** [Triển khai React frontend lên S3/CloudFront, thực hiện kiểm thử toàn diện, giám sát CloudWatch và tối ưu chi phí với VPC Endpoints.](1.10-week10/)
 
-**Tuần 11:** [Làm công việc M...](1.11-week11/)
+**Tuần 11:** [Nghiên cứu và lập kế hoạch triển khai ứng dụng DNA Analysis: thiết kế kiến trúc VPC, xây dựng CloudFormation template, phân tích tối ưu chi phí với VPC Endpoints, và tạo roadmap triển khai chi tiết.](1.11-week11/)
 
-**Tuần 12:** [Làm công việc N...](1.12-week12/)
+**Tuần 12:** [Triển khai hoàn chỉnh hạ tầng AWS (52 resources), backend Spring Boot lên EC2, frontend React lên S3/CloudFront, thực hiện testing toàn diện, giám sát CloudWatch, và VPC Endpoints đạt tiết kiệm 27% chi phí.](1.12-week12/)
