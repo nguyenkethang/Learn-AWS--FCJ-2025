@@ -94,5 +94,6 @@ Chạy hạ tầng workshop này sẽ tốn khoảng **$8.90/tháng** (nếu ch�
 5. [Triển khai Frontend lên S3 và CloudFront](5.5-deploy-frontend/)
 6. [Kiểm tra và Xác thực](5.6-testing/)
 7. [Giám sát và Xử lý sự cố](5.7-monitoring/)
-8. [Dọn dẹp tài nguyên](5.8-cleanup/)
+8. [Thiết lập CI/CD Pipeline](5.8-cicd-pipeline/)
+9. [Dọn dẹp tài nguyên](5.9-cleanup/)
 

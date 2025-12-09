@@ -358,80 +358,80 @@ Các Lớp Bảo mật:
 
 ### Bài học Kinh nghiệm:
 
-**1. CloudFormation Deployment:**
-* **Bài học**: CloudFormation cho phép deploy complex infrastructure nhanh chóng và consistently
-* **Áp dụng**: 52 resources deployed trong 18 phút vs nhiều giờ manual configuration
-* **Rút ra**: IaC là game-changer cho cloud deployments - version control, repeatability, automation
+**1. Triển khai CloudFormation:**
+* **Bài học**: CloudFormation cho phép triển khai infrastructure phức tạp nhanh chóng và nhất quán
+* **Áp dụng**: 52 tài nguyên được triển khai trong 18 phút so với nhiều giờ cấu hình thủ công
+* **Rút ra**: IaC là yếu tố thay đổi cuộc chơi cho triển khai cloud - kiểm soát phiên bản, khả năng lặp lại, tự động hóa
 
-**2. Systemd Service Management:**
-* **Bài học**: Systemd cung cấp robust process management với auto-restart và logging
-* **Áp dụng**: Application tự động restart khi crash, logs integrated với journald
-* **Rút ra**: Luôn sử dụng process managers cho production applications - không chạy applications manually
+**2. Quản lý Systemd Service:**
+* **Bài học**: Systemd cung cấp quản lý process mạnh mẽ với tự động khởi động lại và logging
+* **Áp dụng**: Application tự động khởi động lại khi crash, logs được tích hợp với journald
+* **Rút ra**: Luôn sử dụng process managers cho ứng dụng production - không chạy ứng dụng thủ công
 
-**3. Frontend Build Optimization:**
-* **Bài học**: Proper build optimization dramatically reduces load times và bandwidth costs
-* **Áp dụng**: Code splitting, tree shaking, minification giảm bundle size 65%
-* **Rút ra**: Invest time trong build optimization - faster load times = better user experience
+**3. Tối ưu Build Frontend:**
+* **Bài học**: Tối ưu build phù hợp giảm đáng kể thời gian tải và chi phí băng thông
+* **Áp dụng**: Code splitting, tree shaking, minification giảm kích thước bundle 65%
+* **Rút ra**: Đầu tư thời gian vào tối ưu build - thời gian tải nhanh hơn = trải nghiệm người dùng tốt hơn
 
-**4. CloudFront Caching Strategy:**
-* **Bài học**: Different caching strategies cho different content types
-* **Áp dụng**: Long cache (1 year) cho versioned assets, no-cache cho HTML
-* **Rút ra**: Proper caching reduces origin requests và improves performance globally
+**4. Chiến lược Cache CloudFront:**
+* **Bài học**: Các chiến lược cache khác nhau cho các loại nội dung khác nhau
+* **Áp dụng**: Cache dài (1 năm) cho versioned assets, no-cache cho HTML
+* **Rút ra**: Cache phù hợp giảm requests đến origin và cải thiện hiệu năng toàn cầu
 
 **5. Database Connection Pooling:**
-* **Bài học**: Connection pooling essential cho database performance và resource management
-* **Áp dụng**: HikariCP với 5 min idle, 10 max connections optimal cho workload này
-* **Rút ra**: Always configure connection pooling - prevents connection exhaustion và improves performance
+* **Bài học**: Connection pooling thiết yếu cho hiệu năng database và quản lý tài nguyên
+* **Áp dụng**: HikariCP với 5 min idle, 10 max connections tối ưu cho workload này
+* **Rút ra**: Luôn cấu hình connection pooling - ngăn chặn cạn kiệt kết nối và cải thiện hiệu năng
 
-**6. Health Checks Importance:**
-* **Bài học**: Proper health checks critical cho load balancer routing decisions
-* **Áp dụng**: Spring Boot Actuator health endpoint checks database connectivity
-* **Rút ra**: Health checks should verify critical dependencies, không chỉ application running
+**6. Tầm quan trọng của Health Checks:**
+* **Bài học**: Health checks phù hợp rất quan trọng cho quyết định định tuyến của load balancer
+* **Áp dụng**: Spring Boot Actuator health endpoint kiểm tra kết nối database
+* **Rút ra**: Health checks nên xác minh các phụ thuộc quan trọng, không chỉ ứng dụng đang chạy
 
-**7. VPC Endpoints Cost Savings:**
-* **Bài học**: VPC Endpoints can significantly reduce costs cho AWS service access
-* **Áp dụng**: Saved $11.50/month (27%) bằng cách replace NAT Gateway với VPC Endpoints
-* **Rút ra**: For production workloads với high AWS service usage, VPC Endpoints are cost-effective
+**7. Tiết kiệm Chi phí với VPC Endpoints:**
+* **Bài học**: VPC Endpoints có thể giảm đáng kể chi phí cho truy cập dịch vụ AWS
+* **Áp dụng**: Tiết kiệm $11.50/tháng (27%) bằng cách thay thế NAT Gateway bằng VPC Endpoints
+* **Rút ra**: Đối với workloads production với sử dụng dịch vụ AWS cao, VPC Endpoints hiệu quả chi phí
 
-**8. Comprehensive Testing:**
-* **Bài học**: Thorough testing prevents production issues và builds confidence
-* **Áp dụng**: Authentication, functionality, integration, performance, cross-browser testing
-* **Rút ra**: Testing time is investment, không phải cost - bugs in production are 10x more expensive
+**8. Kiểm thử Toàn diện:**
+* **Bài học**: Kiểm thử kỹ lưỡng ngăn chặn vấn đề production và xây dựng sự tự tin
+* **Áp dụng**: Kiểm thử xác thực, chức năng, tích hợp, hiệu năng, cross-browser
+* **Rút ra**: Thời gian kiểm thử là đầu tư, không phải chi phí - bugs trong production đắt gấp 10 lần
 
-**9. Monitoring và Alerting:**
-* **Bài học**: Cannot fix what you cannot see - monitoring is essential
-* **Áp dụng**: CloudWatch Logs, Metrics, Alarms provide complete observability
-* **Rút ra**: Implement monitoring from day one - logs và metrics invaluable cho troubleshooting
+**9. Giám sát và Cảnh báo:**
+* **Bài học**: Không thể sửa những gì không thấy được - giám sát là thiết yếu
+* **Áp dụng**: CloudWatch Logs, Metrics, Alarms cung cấp khả năng quan sát hoàn chỉnh
+* **Rút ra**: Triển khai giám sát từ ngày đầu - logs và metrics vô giá cho khắc phục sự cố
 
-**10. Documentation Value:**
-* **Bài học**: Good documentation accelerates troubleshooting và knowledge transfer
-* **Áp dụng**: Architecture diagrams, deployment guides, runbooks created
-* **Rút ra**: Documentation time pays off trong incident response, team onboarding, audits
+**10. Giá trị của Tài liệu:**
+* **Bài học**: Tài liệu tốt tăng tốc khắc phục sự cố và chuyển giao kiến thức
+* **Áp dụng**: Đã tạo sơ đồ kiến trúc, hướng dẫn triển khai, runbooks
+* **Rút ra**: Thời gian tài liệu hóa được đền đáp trong phản ứng sự cố, onboarding nhóm, audits
 
-**11. Security Best Practices:**
-* **Bài học**: Security must be built-in, không phải bolted-on
-* **Áp dụng**: Private subnets, Security Groups, IAM roles, encryption implemented
-* **Rút ra**: Follow defense-in-depth approach - multiple security layers
+**11. Best Practices Bảo mật:**
+* **Bài học**: Bảo mật phải được xây dựng sẵn, không phải gắn thêm sau
+* **Áp dụng**: Private subnets, Security Groups, IAM roles, encryption đã triển khai
+* **Rút ra**: Tuân theo phương pháp phòng thủ nhiều lớp - nhiều lớp bảo mật
 
-**12. Auto Scaling Configuration:**
-* **Bài học**: Auto Scaling provides high availability và cost optimization
-* **Áp dụng**: Scale 1-4 instances based on CPU metrics
-* **Rút ra**: Design for horizontal scaling - stateless applications scale easily
+**12. Cấu hình Auto Scaling:**
+* **Bài học**: Auto Scaling cung cấp high availability và tối ưu chi phí
+* **Áp dụng**: Scale 1-4 instances dựa trên CPU metrics
+* **Rút ra**: Thiết kế cho horizontal scaling - ứng dụng stateless dễ scale
 
-**13. CORS Configuration:**
-* **Bài học**: CORS must be configured correctly cho cross-origin requests
-* **Áp dụng**: Configure CORS trên both API Gateway và Spring Boot backend
-* **Rút ra**: Test CORS thoroughly trong development - browser console shows clear error messages
+**13. Cấu hình CORS:**
+* **Bài học**: CORS phải được cấu hình đúng cho cross-origin requests
+* **Áp dụng**: Cấu hình CORS trên cả API Gateway và Spring Boot backend
+* **Rút ra**: Kiểm tra CORS kỹ lưỡng trong development - browser console hiển thị thông báo lỗi rõ ràng
 
-**14. Environment Configuration:**
-* **Bài học**: Separate configuration từ code cho different environments
-* **Áp dụng**: Use environment variables và external configuration files
-* **Rút ra**: Never hardcode environment-specific values trong code hoặc JAR files
+**14. Cấu hình Môi trường:**
+* **Bài học**: Tách cấu hình ra khỏi code cho các môi trường khác nhau
+* **Áp dụng**: Sử dụng biến môi trường và file cấu hình bên ngoài
+* **Rút ra**: Không bao giờ hardcode các giá trị theo môi trường trong code hoặc JAR files
 
-**15. Deployment Automation:**
-* **Bài học**: Manual deployments are error-prone và time-consuming
-* **Áp dụng**: Scripts automate build, upload, deploy processes
-* **Rút ra**: Automate repetitive tasks - saves time, reduces errors, enables CI/CD
+**15. Tự động hóa Triển khai:**
+* **Bài học**: Triển khai thủ công dễ lỗi và tốn thời gian
+* **Áp dụng**: Scripts tự động hóa quy trình build, upload, deploy
+* **Rút ra**: Tự động hóa các tác vụ lặp lại - tiết kiệm thời gian, giảm lỗi, cho phép CI/CD
 
 ### References và Tài nguyên Bổ sung:
 
@@ -490,17 +490,17 @@ Trong 2 tuần, đã hoàn thành việc nghiên cứu, thiết kế và triển
 
 **Kỹ năng đạt được:**
 * Infrastructure as Code với CloudFormation
-* AWS networking và security architecture
-* Full-stack application deployment
-* Performance optimization và testing
-* Cost optimization strategies
-* Production operations và monitoring
+* Kiến trúc networking và security AWS
+* Triển khai ứng dụng full-stack
+* Tối ưu hiệu năng và testing
+* Chiến lược tối ưu chi phí
+* Vận hành và giám sát production
 
 **Giá trị kinh doanh:**
-* Scalable architecture có thể handle growth
-* Cost-optimized solution ($30.50/month)
+* Kiến trúc có khả năng mở rộng có thể xử lý tăng trưởng
+* Giải pháp tối ưu chi phí ($30.50/tháng)
 * High availability (99.95% uptime)
-* Fast performance (<200ms API, <2s page load)
-* Secure by design với multiple security layers
-* Fully documented và maintainable
+* Hiệu năng nhanh (<200ms API, <2s tải trang)
+* Bảo mật theo thiết kế với nhiều lớp bảo mật
+* Được tài liệu hóa đầy đủ và dễ bảo trì
 

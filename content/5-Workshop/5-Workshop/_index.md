@@ -94,5 +94,6 @@ Running this workshop infrastructure will cost approximately **$8.90/month** (if
 5. [Deploy Frontend to S3 and CloudFront](5.5-deploy-frontend/)
 6. [Testing and Validation](5.6-testing/)
 7. [Monitoring and Troubleshooting](5.7-monitoring/)
-8. [Clean Up Resources](5.8-cleanup/)
+8. [CI/CD Pipeline Setup](5.8-cicd-pipeline/)
+9. [Clean Up Resources](5.9-cleanup/)
 
