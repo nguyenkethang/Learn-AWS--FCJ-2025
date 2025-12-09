@@ -18,26 +18,26 @@ pre: " <b> 1.12. </b> "
 
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 1   | - Deploy CloudFormation stack với infrastructure template <br> - Monitor stack creation progress <br> - Verify tất cả resources được tạo thành công <br> - Extract outputs (RDS endpoint, ALB DNS, S3 buckets) | 2025/11/24   | 2025/11/24      | Creating CloudFormation Stacks <br> <https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-create-stack.html> <br> Monitoring Stack Events <br> <https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-listing-event-history.html> <br> CloudFormation Outputs <br> <https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html> |
-| 2   | - Build Spring Boot application JAR file <br> - Configure application.properties với RDS connection <br> - Upload JAR lên S3 backend bucket <br> - Deploy application lên EC2 instances <br> - Configure systemd service cho auto-start | 2025/11/25   | 2025/11/25      | Maven Build Lifecycle <br> <https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html> <br> Spring Boot External Config <br> <https://docs.spring.io/spring-boot/reference/features/external-config.html> <br> Systemd Service Management <br> <https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html> |
-| 3   | - Build React production bundle với Vite <br> - Configure environment variables (API Gateway URL) <br> - Upload frontend build lên S3 <br> - Configure S3 bucket policies và CORS <br> - Create CloudFront invalidation | 2025/11/26   | 2025/11/26      | Vite Production Build <br> <https://vitejs.dev/guide/build.html> <br> S3 Static Website Hosting <br> <https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html> <br> CloudFront Invalidations <br> <https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html> |
-| 4   | - Thực hiện end-to-end testing (authentication, DNA analysis) <br> - Test API integration và CORS configuration <br> - Performance testing với load testing tools <br> - Cross-browser và responsive testing <br> - Verify database operations | 2025/11/27   | 2025/11/27      | API Testing Best Practices <br> <https://www.postman.com/api-platform/api-testing/> <br> Web Performance Testing <br> <https://web.dev/performance-testing/> <br> Browser Testing Tools <br> <https://developer.chrome.com/docs/devtools/> |
-| 5   | - Configure CloudWatch Logs và Metrics <br> - Set up CloudWatch Alarms cho critical metrics <br> - Configure SNS notifications <br> - Implement VPC Endpoints để tối ưu chi phí <br> - Complete documentation và final validation | 2025/11/28   | 2025/11/30      | CloudWatch Monitoring <br> <https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/> <br> VPC Endpoints Setup <br> <https://docs.aws.amazon.com/vpc/latest/privatelink/create-interface-endpoint.html> <br> AWS Cost Optimization <br> <https://aws.amazon.com/aws-cost-management/aws-cost-optimization/> |
+| 1   | - Triển khai CloudFormation stack với infrastructure template <br> - Giám sát tiến trình tạo stack <br> - Xác minh tất cả resources được tạo thành công <br> - Trích xuất outputs (RDS endpoint, ALB DNS, S3 buckets) | 2025/11/24   | 2025/11/24      | Tạo CloudFormation Stacks <br> <https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-create-stack.html> <br> Giám sát Stack Events <br> <https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-listing-event-history.html> <br> CloudFormation Outputs <br> <https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html> |
+| 2   | - Build file JAR của Spring Boot application <br> - Cấu hình application.properties với kết nối RDS <br> - Upload JAR lên S3 backend bucket <br> - Triển khai application lên EC2 instances <br> - Cấu hình systemd service để tự động khởi động | 2025/11/25   | 2025/11/25      | Chu trình Build Maven <br> <https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html> <br> Cấu hình Bên ngoài Spring Boot <br> <https://docs.spring.io/spring-boot/reference/features/external-config.html> <br> Quản lý Systemd Service <br> <https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html> |
+| 3   | - Build React production bundle với Vite <br> - Cấu hình biến môi trường (API Gateway URL) <br> - Upload frontend build lên S3 <br> - Cấu hình S3 bucket policies và CORS <br> - Tạo CloudFront invalidation | 2025/11/26   | 2025/11/26      | Vite Production Build <br> <https://vitejs.dev/guide/build.html> <br> Lưu trữ Website Tĩnh trên S3 <br> <https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html> <br> CloudFront Invalidations <br> <https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html> |
+| 4   | - Thực hiện kiểm thử end-to-end (xác thực, phân tích DNA) <br> - Kiểm tra tích hợp API và cấu hình CORS <br> - Kiểm thử hiệu năng với công cụ load testing <br> - Kiểm thử cross-browser và responsive <br> - Xác minh các thao tác database | 2025/11/27   | 2025/11/27      | Best Practices Kiểm thử API <br> <https://www.postman.com/api-platform/api-testing/> <br> Kiểm thử Hiệu năng Web <br> <https://web.dev/performance-testing/> <br> Công cụ Kiểm thử Browser <br> <https://developer.chrome.com/docs/devtools/> |
+| 5   | - Cấu hình CloudWatch Logs và Metrics <br> - Thiết lập CloudWatch Alarms cho các metrics quan trọng <br> - Cấu hình thông báo SNS <br> - Triển khai VPC Endpoints để tối ưu chi phí <br> - Hoàn thiện tài liệu và xác thực cuối cùng | 2025/11/28   | 2025/11/30      | Giám sát CloudWatch <br> <https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/> <br> Thiết lập VPC Endpoints <br> <https://docs.aws.amazon.com/vpc/latest/privatelink/create-interface-endpoint.html> <br> Tối ưu Chi phí AWS <br> <https://aws.amazon.com/aws-cost-management/aws-cost-optimization/> |
 
 ### Kết quả đạt được tuần 12:
 
 **1. Triển khai Infrastructure với CloudFormation:**
-* Deploy CloudFormation stack thành công:
-  * **Stack Name**: workshop-dna-analysis-dev
-  * **Region**: ap-southeast-1 (Singapore)
-  * **Deployment Time**: 18 phút 32 giây
-  * **Total Resources**: 52 resources created
+* Triển khai CloudFormation stack thành công:
+  * **Tên Stack**: workshop-dna-analysis-dev
+  * **Vùng**: ap-southeast-1 (Singapore)
+  * **Thời gian Triển khai**: 18 phút 32 giây
+  * **Tổng số Resources**: 52 tài nguyên được tạo
 
-* Resources được tạo thành công:
-  * **VPC**: 1 VPC (10.0.0.0/16) với DNS support enabled
-  * **Subnets**: 2 public subnets, 2 private subnets across 2 AZs
+* Các tài nguyên được tạo thành công:
+  * **VPC**: 1 VPC (10.0.0.0/16) với hỗ trợ DNS được bật
+  * **Subnets**: 2 public subnets, 2 private subnets trên 2 AZs
   * **Gateways**: 1 Internet Gateway, 1 NAT Gateway
-  * **Route Tables**: 2 route tables với proper routing configuration
+  * **Route Tables**: 2 route tables với cấu hình routing phù hợp
   * **EC2**: Launch Template, Auto Scaling Group (1-4 instances), t3.nano
   * **Load Balancer**: Application Load Balancer với Target Group
   * **Database**: RDS MySQL db.t3.micro instance trong private subnet
@@ -47,27 +47,27 @@ pre: " <b> 1.12. </b> "
   * **Monitoring**: CloudWatch Log Groups, 5 Alarms, SNS Topic
   * **API**: API Gateway REST API với VPC Link
 
-* Verification checks passed:
-  * ✅ VPC và subnets có correct CIDR blocks
-  * ✅ Internet Gateway attached to VPC
+* Các kiểm tra xác minh đã pass:
+  * ✅ VPC và subnets có CIDR blocks chính xác
+  * ✅ Internet Gateway được gắn vào VPC
   * ✅ NAT Gateway có Elastic IP
-  * ✅ Route tables có correct routes
-  * ✅ Security Groups có proper ingress/egress rules
-  * ✅ EC2 instances running và healthy
-  * ✅ ALB health checks passing
-  * ✅ RDS instance available và accessible
-  * ✅ S3 buckets created với correct policies
-  * ✅ CloudFront distribution deployed
+  * ✅ Route tables có routes chính xác
+  * ✅ Security Groups có quy tắc ingress/egress phù hợp
+  * ✅ EC2 instances đang chạy và khỏe mạnh
+  * ✅ ALB health checks đạt
+  * ✅ RDS instance khả dụng và có thể truy cập
+  * ✅ S3 buckets được tạo với policies chính xác
+  * ✅ CloudFront distribution đã triển khai
 
-**2. Deploy Backend Spring Boot Application:**
+**2. Triển khai Backend Spring Boot Application:**
 * Build application thành công:
-  * **Build Tool**: Maven 3.9.5
-  * **Java Version**: Java 17
-  * **JAR File**: workshop-dna-analysis-0.0.1-SNAPSHOT.jar
-  * **File Size**: 68.5 MB
-  * **Build Time**: 2 phút 15 giây
+  * **Công cụ Build**: Maven 3.9.5
+  * **Phiên bản Java**: Java 17
+  * **File JAR**: workshop-dna-analysis-0.0.1-SNAPSHOT.jar
+  * **Kích thước File**: 68.5 MB
+  * **Thời gian Build**: 2 phút 15 giây
 
-* Configure application.properties:
+* Cấu hình application.properties:
   ```properties
   # Database Configuration
   spring.datasource.url=jdbc:mysql://workshop-db.xxxxx.ap-southeast-1.rds.amazonaws.com:3306/dna_analysis
@@ -88,17 +88,17 @@ pre: " <b> 1.12. </b> "
   server.compression.enabled=true
   ```
 
-* Deploy lên EC2:
-  * Upload JAR file lên S3 backend bucket
-  * Download JAR từ S3 xuống EC2 instance (/opt/workshop/)
-  * Create application.properties với environment-specific values
-  * Configure systemd service (workshop.service)
-  * Enable và start service
-  * Verify application running on port 8080
-  * Test health endpoint: `curl localhost:8080/actuator/health`
-  * Response: `{"status":"UP"}`
+* Triển khai lên EC2:
+  * Upload file JAR lên S3 backend bucket
+  * Tải JAR từ S3 xuống EC2 instance (/opt/workshop/)
+  * Tạo application.properties với các giá trị theo môi trường
+  * Cấu hình systemd service (workshop.service)
+  * Bật và khởi động service
+  * Xác minh application đang chạy trên port 8080
+  * Kiểm tra health endpoint: `curl localhost:8080/actuator/health`
+  * Phản hồi: `{"status":"UP"}`
 
-* Systemd service configuration:
+* Cấu hình Systemd service:
   ```ini
   [Unit]
   Description=DNA Analysis Workshop Application
@@ -116,23 +116,23 @@ pre: " <b> 1.12. </b> "
   WantedBy=multi-user.target
   ```
 
-**3. Deploy Frontend React Application:**
+**3. Triển khai Frontend React Application:**
 * Build React application:
-  * **Build Tool**: Vite 5.0
-  * **Node Version**: 18.18.0
-  * **Build Command**: `npm run build`
-  * **Output Directory**: dist/
-  * **Build Time**: 45 giây
-  * **Bundle Size**: 2.8 MB (uncompressed), 850 KB (gzipped)
+  * **Công cụ Build**: Vite 5.0
+  * **Phiên bản Node**: 18.18.0
+  * **Lệnh Build**: `npm run build`
+  * **Thư mục Output**: dist/
+  * **Thời gian Build**: 45 giây
+  * **Kích thước Bundle**: 2.8 MB (không nén), 850 KB (gzipped)
 
-* Build optimization applied:
+* Các tối ưu build đã áp dụng:
   * Code splitting với dynamic imports
-  * Tree shaking để remove unused code
+  * Tree shaking để loại bỏ code không sử dụng
   * Minification của JavaScript và CSS
-  * Image optimization và lazy loading
-  * Gzip compression enabled
+  * Tối ưu hóa hình ảnh và lazy loading
+  * Bật nén Gzip
 
-* Configure environment variables:
+* Cấu hình biến môi trường:
   ```env
   VITE_API_GATEWAY_URL=https://xxxxx.execute-api.ap-southeast-1.amazonaws.com/prod
   VITE_APP_NAME=DNA Analysis Workshop
@@ -140,186 +140,186 @@ pre: " <b> 1.12. </b> "
   ```
 
 * Upload lên S3:
-  * Sync dist/ folder lên S3 frontend bucket
-  * Set cache-control headers:
+  * Đồng bộ thư mục dist/ lên S3 frontend bucket
+  * Thiết lập cache-control headers:
     - Static assets (JS, CSS, images): `max-age=31536000` (1 năm)
     - index.html: `no-cache, no-store, must-revalidate`
-  * Enable S3 bucket versioning
-  * Configure bucket policy cho CloudFront OAI access
+  * Bật S3 bucket versioning
+  * Cấu hình bucket policy cho CloudFront OAI access
 
-* CloudFront configuration:
-  * Create invalidation cho path `/*`
-  * Wait for invalidation complete (~5-10 phút)
-  * Verify frontend accessible via CloudFront URL
-  * Test caching behavior
-  * Verify HTTPS redirect working
+* Cấu hình CloudFront:
+  * Tạo invalidation cho path `/*`
+  * Đợi invalidation hoàn tất (~5-10 phút)
+  * Xác minh frontend có thể truy cập qua CloudFront URL
+  * Kiểm tra hành vi caching
+  * Xác minh HTTPS redirect hoạt động
 
-**4. Comprehensive Testing:**
-* **Authentication Testing**:
-  * ✅ User registration với email verification
-  * ✅ Login/logout functionality
-  * ✅ JWT token generation và validation
-  * ✅ Token refresh mechanism
-  * ✅ Role-based access control (Guest, Member, Staff, Admin)
-  * ✅ Password reset flow
+**4. Kiểm thử Toàn diện:**
+* **Kiểm thử Xác thực**:
+  * ✅ Đăng ký người dùng với xác minh email
+  * ✅ Chức năng đăng nhập/đăng xuất
+  * ✅ Tạo và xác thực JWT token
+  * ✅ Cơ chế làm mới token
+  * ✅ Kiểm soát truy cập theo vai trò (Guest, Member, Staff, Admin)
+  * ✅ Luồng đặt lại mật khẩu
 
-* **DNA Analysis Testing**:
-  * ✅ File upload (FASTA format)
-  * ✅ DNA sequence validation
-  * ✅ Analysis processing và result generation
-  * ✅ Result visualization với charts
-  * ✅ History retrieval
-  * ✅ Export results (PDF, CSV)
+* **Kiểm thử Phân tích DNA**:
+  * ✅ Upload file (định dạng FASTA)
+  * ✅ Xác thực chuỗi DNA
+  * ✅ Xử lý phân tích và tạo kết quả
+  * ✅ Trực quan hóa kết quả với biểu đồ
+  * ✅ Truy xuất lịch sử
+  * ✅ Xuất kết quả (PDF, CSV)
 
-* **API Integration Testing**:
-  * ✅ Frontend-Backend communication
-  * ✅ CORS configuration working
-  * ✅ Error handling và user feedback
-  * ✅ API Gateway integration
-  * ✅ Load Balancer routing
-  * ✅ Database CRUD operations
+* **Kiểm thử Tích hợp API**:
+  * ✅ Giao tiếp Frontend-Backend
+  * ✅ Cấu hình CORS hoạt động
+  * ✅ Xử lý lỗi và phản hồi người dùng
+  * ✅ Tích hợp API Gateway
+  * ✅ Định tuyến Load Balancer
+  * ✅ Các thao tác CRUD database
 
-* **Performance Testing**:
-  * Page load time: 1.8 giây (target: <2s) ✅
-  * API response time: 165ms average (target: <200ms) ✅
+* **Kiểm thử Hiệu năng**:
+  * Thời gian tải trang: 1.8 giây (mục tiêu: <2s) ✅
+  * Thời gian phản hồi API: 165ms trung bình (mục tiêu: <200ms) ✅
   * Time to First Byte (TTFB): 120ms ✅
   * First Contentful Paint (FCP): 0.9s ✅
   * Largest Contentful Paint (LCP): 1.5s ✅
-  * Concurrent users tested: 50 users ✅
-  * Database query performance: <50ms average ✅
+  * Số người dùng đồng thời đã kiểm tra: 50 users ✅
+  * Hiệu năng database query: <50ms trung bình ✅
 
-* **Cross-Browser Testing**:
+* **Kiểm thử Cross-Browser**:
   * ✅ Chrome 120+ (Desktop & Mobile)
   * ✅ Firefox 121+ (Desktop & Mobile)
   * ✅ Safari 17+ (Desktop & iOS)
   * ✅ Edge 120+ (Desktop)
-  * ✅ Responsive design (320px - 2560px)
-  * ✅ Accessibility (WCAG 2.1 Level AA)
+  * ✅ Thiết kế responsive (320px - 2560px)
+  * ✅ Khả năng tiếp cận (WCAG 2.1 Level AA)
 
-**5. Monitoring và Cost Optimization:**
-* **CloudWatch Configuration**:
+**5. Giám sát và Tối ưu Chi phí:**
+* **Cấu hình CloudWatch**:
   * Application Logs: `/aws/workshop/application`
   * Access Logs: `/aws/workshop/access`
   * Error Logs: `/aws/workshop/error`
-  * Log retention: 7 days
-  * Log insights queries configured
+  * Thời gian lưu trữ log: 7 ngày
+  * Đã cấu hình log insights queries
 
 * **CloudWatch Alarms**:
-  * EC2 CPU Utilization > 80% for 5 minutes
-  * RDS CPU Utilization > 75% for 5 minutes
-  * RDS Database Connections > 90% of max
+  * EC2 CPU Utilization > 80% trong 5 phút
+  * RDS CPU Utilization > 75% trong 5 phút
+  * RDS Database Connections > 90% của max
   * ALB Unhealthy Target Count > 0
   * API Gateway 5XX Error Rate > 5%
   * RDS Free Storage Space < 2GB
 
-* **SNS Notifications**:
-  * Email notifications cho critical alarms
-  * SMS notifications cho production incidents
-  * Slack integration cho team notifications
+* **Thông báo SNS**:
+  * Thông báo email cho các cảnh báo quan trọng
+  * Thông báo SMS cho sự cố production
+  * Tích hợp Slack cho thông báo nhóm
 
-* **VPC Endpoints Implementation**:
-  * Created S3 Gateway Endpoint (FREE)
-  * Created CloudWatch Interface Endpoint ($7.20/month)
-  * Created SSM Interface Endpoint ($7.20/month)
-  * Created EC2 Interface Endpoint ($7.20/month)
-  * Updated route tables để route traffic qua endpoints
-  * Removed NAT Gateway dependency
-  * Verified application functionality sau khi implement
+* **Triển khai VPC Endpoints**:
+  * Tạo S3 Gateway Endpoint (MIỄN PHÍ)
+  * Tạo CloudWatch Interface Endpoint ($7.20/tháng)
+  * Tạo SSM Interface Endpoint ($7.20/tháng)
+  * Tạo EC2 Interface Endpoint ($7.20/tháng)
+  * Cập nhật route tables để định tuyến traffic qua endpoints
+  * Loại bỏ phụ thuộc NAT Gateway
+  * Xác minh chức năng ứng dụng sau khi triển khai
 
-* **Cost Analysis**:
-  * **Before Optimization**: $42/month
-    - NAT Gateway: $32.40/month
-    - Data Transfer: $5-10/month
-    - Other services: $8.90/month
+* **Phân tích Chi phí**:
+  * **Trước Tối ưu**: $42/tháng
+    - NAT Gateway: $32.40/tháng
+    - Truyền dữ liệu: $5-10/tháng
+    - Các dịch vụ khác: $8.90/tháng
   
-  * **After Optimization**: $30.50/month
-    - VPC Endpoints: $21.60/month
-    - Other services: $8.90/month
-    - Data Transfer: Minimal
+  * **Sau Tối ưu**: $30.50/tháng
+    - VPC Endpoints: $21.60/tháng
+    - Các dịch vụ khác: $8.90/tháng
+    - Truyền dữ liệu: Tối thiểu
   
-  * **Monthly Savings**: $11.50/month (27% reduction)
-  * **Annual Savings**: $138/year
+  * **Tiết kiệm Hàng tháng**: $11.50/tháng (giảm 27%)
+  * **Tiết kiệm Hàng năm**: $138/năm
 
-**6. Documentation và Knowledge Transfer:**
-* Created comprehensive documentation:
-  * **Architecture Documentation**:
-    - System architecture diagram
-    - Network topology diagram
-    - Security architecture diagram
-    - Data flow diagrams
+**6. Tài liệu và Chuyển giao Kiến thức:**
+* Tạo tài liệu toàn diện:
+  * **Tài liệu Kiến trúc**:
+    - Sơ đồ kiến trúc hệ thống
+    - Sơ đồ topology mạng
+    - Sơ đồ kiến trúc bảo mật
+    - Sơ đồ luồng dữ liệu
   
-  * **Deployment Documentation**:
-    - Step-by-step deployment guide
-    - CloudFormation template documentation
-    - Configuration management guide
-    - Environment setup instructions
+  * **Tài liệu Triển khai**:
+    - Hướng dẫn triển khai từng bước
+    - Tài liệu CloudFormation template
+    - Hướng dẫn quản lý cấu hình
+    - Hướng dẫn thiết lập môi trường
   
-  * **Operations Documentation**:
-    - Monitoring and alerting guide
-    - Troubleshooting runbook
-    - Backup and recovery procedures
-    - Scaling guidelines
+  * **Tài liệu Vận hành**:
+    - Hướng dẫn giám sát và cảnh báo
+    - Runbook khắc phục sự cố
+    - Quy trình sao lưu và phục hồi
+    - Hướng dẫn mở rộng quy mô
   
-  * **Cost Documentation**:
-    - Cost breakdown by service
-    - Optimization recommendations
-    - Budget alerts configuration
-    - Reserved Instance analysis
+  * **Tài liệu Chi phí**:
+    - Phân tích chi phí theo dịch vụ
+    - Khuyến nghị tối ưu hóa
+    - Cấu hình cảnh báo ngân sách
+    - Phân tích Reserved Instance
 
-**7. Final System Validation:**
-* Complete system verification:
-  * ✅ All infrastructure resources healthy
-  * ✅ Frontend accessible via CloudFront
-  * ✅ Backend API responding correctly
-  * ✅ Database connections stable
-  * ✅ Authentication flow working
-  * ✅ DNA analysis features functional
-  * ✅ Monitoring and alerting active
-  * ✅ Logs streaming to CloudWatch
-  * ✅ Cost optimization implemented
-  * ✅ Documentation complete
+**7. Xác thực Hệ thống Cuối cùng:**
+* Xác minh hệ thống hoàn chỉnh:
+  * ✅ Tất cả tài nguyên infrastructure khỏe mạnh
+  * ✅ Frontend có thể truy cập qua CloudFront
+  * ✅ Backend API phản hồi chính xác
+  * ✅ Kết nối database ổn định
+  * ✅ Luồng xác thực hoạt động
+  * ✅ Các tính năng phân tích DNA hoạt động
+  * ✅ Giám sát và cảnh báo đang hoạt động
+  * ✅ Logs streaming vào CloudWatch
+  * ✅ Tối ưu chi phí đã triển khai
+  * ✅ Tài liệu hoàn chỉnh
 
-* Performance metrics achieved:
-  * **Availability**: 99.95% (target: 99.9%) ✅
-  * **Response Time**: 165ms avg (target: <200ms) ✅
-  * **Page Load**: 1.8s (target: <2s) ✅
-  * **Error Rate**: 0.02% (target: <1%) ✅
-  * **Throughput**: 500 req/min sustained ✅
+* Các chỉ số hiệu năng đạt được:
+  * **Khả dụng**: 99.95% (mục tiêu: 99.9%) ✅
+  * **Thời gian Phản hồi**: 165ms trung bình (mục tiêu: <200ms) ✅
+  * **Tải Trang**: 1.8s (mục tiêu: <2s) ✅
+  * **Tỷ lệ Lỗi**: 0.02% (mục tiêu: <1%) ✅
+  * **Throughput**: 500 req/phút duy trì ✅
 
 ### Kết quả & Sản phẩm Tuần 12:
 
 **Các Sản phẩm Hoàn thành:**
-* ✅ Infrastructure deployed trên AWS (52 resources)
-* ✅ Backend Spring Boot application running on EC2
-* ✅ Frontend React application hosted on S3+CloudFront
-* ✅ RDS MySQL database configured và operational
-* ✅ CloudWatch monitoring và alerting active
-* ✅ VPC Endpoints implemented cho cost optimization
-* ✅ Comprehensive testing completed
-* ✅ Complete documentation package
-* ✅ System validated và production-ready
+* ✅ Infrastructure đã triển khai trên AWS (52 tài nguyên)
+* ✅ Backend Spring Boot application đang chạy trên EC2
+* ✅ Frontend React application được lưu trữ trên S3+CloudFront
+* ✅ RDS MySQL database đã cấu hình và hoạt động
+* ✅ CloudWatch monitoring và alerting đang hoạt động
+* ✅ VPC Endpoints đã triển khai để tối ưu chi phí
+* ✅ Kiểm thử toàn diện đã hoàn thành
+* ✅ Gói tài liệu hoàn chỉnh
+* ✅ Hệ thống đã xác thực và sẵn sàng production
 
 **Các Chỉ số Đạt được:**
-* **Infrastructure Deployment**: 18 phút 32 giây
-* **Backend Build Time**: 2 phút 15 giây
-* **Frontend Build Time**: 45 giây
-* **Total Deployment Time**: ~4 giờ (including testing)
-* **System Availability**: 99.95%
-* **API Response Time**: 165ms average
-* **Page Load Time**: 1.8 giây
-* **CloudFront Cache Hit Rate**: 87%
-* **Monthly Cost**: $30.50 (optimized)
-* **Cost Savings**: 27% vs initial design
+* **Triển khai Infrastructure**: 18 phút 32 giây
+* **Thời gian Build Backend**: 2 phút 15 giây
+* **Thời gian Build Frontend**: 45 giây
+* **Tổng Thời gian Triển khai**: ~4 giờ (bao gồm testing)
+* **Khả dụng Hệ thống**: 99.95%
+* **Thời gian Phản hồi API**: 165ms trung bình
+* **Thời gian Tải Trang**: 1.8 giây
+* **Tỷ lệ Cache Hit CloudFront**: 87%
+* **Chi phí Hàng tháng**: $30.50 (đã tối ưu)
+* **Tiết kiệm Chi phí**: 27% so với thiết kế ban đầu
 
-**Final Architecture:**
+**Kiến trúc Cuối cùng:**
 ```
-Internet (Users)
+Internet (Người dùng)
     │
-    ├─── CloudFront CDN (Global Edge Locations)
+    ├─── CloudFront CDN (Các Edge Locations Toàn cầu)
     │    └─── S3 Bucket (Frontend React App)
     │         ├─── index.html
     │         ├─── assets/ (JS, CSS, Images)
-    │         └─── Cache: 1 year for assets, no-cache for HTML
+    │         └─── Cache: 1 năm cho assets, no-cache cho HTML
     │
     └─── API Gateway (REST API)
          └─── VPC Link
@@ -328,31 +328,31 @@ Internet (Users)
                         └─── EC2 Auto Scaling Group (1-4 instances)
                              └─── Spring Boot App (systemd service)
                                   └─── RDS MySQL (Private Subnet)
-                                       ├─── Automated Backups
-                                       └─── Encryption at Rest
+                                       ├─── Sao lưu Tự động
+                                       └─── Mã hóa at Rest
 
-VPC Endpoints (Cost Optimization):
-├─── S3 Gateway Endpoint (FREE)
+VPC Endpoints (Tối ưu Chi phí):
+├─── S3 Gateway Endpoint (MIỄN PHÍ)
 ├─── CloudWatch Interface Endpoint
 ├─── SSM Interface Endpoint
 └─── EC2 Interface Endpoint
 
-Security Layers:
-├─── CloudFront: HTTPS only, OAI for S3
+Các Lớp Bảo mật:
+├─── CloudFront: Chỉ HTTPS, OAI cho S3
 ├─── API Gateway: Resource policies, throttling
-├─── ALB Security Group: Port 80/443 from Internet
-├─── EC2 Security Group: Port 8080 from ALB only
-└─── RDS Security Group: Port 3306 from EC2 only
+├─── ALB Security Group: Port 80/443 từ Internet
+├─── EC2 Security Group: Port 8080 chỉ từ ALB
+└─── RDS Security Group: Port 3306 chỉ từ EC2
 ```
 
-**Technology Stack Deployed:**
+**Công nghệ Stack Đã Triển khai:**
 * **Frontend**: React 18, TypeScript, Vite, Material-UI, TailwindCSS, Recharts
 * **Backend**: Spring Boot 3.x, Java 17, Spring Security, JWT, Spring Data JPA
 * **Database**: MySQL 8.0, HikariCP connection pool
 * **Infrastructure**: CloudFormation, VPC, EC2 t3.nano, RDS db.t3.micro
 * **Storage & CDN**: S3, CloudFront
 * **Load Balancing**: Application Load Balancer, Auto Scaling Group
-* **API Management**: API Gateway with VPC Link
+* **API Management**: API Gateway với VPC Link
 * **Monitoring**: CloudWatch Logs, Metrics, Alarms, SNS
 * **Security**: IAM Roles, Security Groups, SSL/TLS, Encryption
 
