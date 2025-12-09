@@ -22,9 +22,9 @@ pre: " <b> 1. </b> "
 
 **Tuần 8:** [Hoàn thành đề xuất dự án BDSS với thiết kế kiến trúc AWS 3 tầng, yêu cầu kỹ thuật và ước tính ngân sách.](1.8-week8/)
 
-**Tuần 9:** [Làm công việc I...](1.9-week9/)
+**Tuần 9:** [Triển khai hạ tầng AWS với CloudFormation và ứng dụng backend Spring Boot lên EC2 với systemd service.](1.9-week9/)
 
-**Tuần 10:** [Làm công việc L...](1.10-week10/)
+**Tuần 10:** [Triển khai React frontend lên S3/CloudFront, thực hiện kiểm thử toàn diện, giám sát CloudWatch và tối ưu chi phí với VPC Endpoints.](1.10-week10/)
 
 **Tuần 11:** [Làm công việc M...](1.11-week11/)
 

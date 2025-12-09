@@ -22,9 +22,9 @@ pre: " <b> 1. </b> "
 
 **Week 8:** [Completed BDSS project proposal with AWS 3-tier architecture design, technical requirements, and budget estimation.](1.8-week8/)
 
-**Week 9:** [Doing task I...](1.9-week9/)
+**Week 9:** [Deployed AWS infrastructure with CloudFormation and Spring Boot backend application to EC2 with systemd service.](1.9-week9/)
 
-**Week 10:** [Doing task L...](1.10-week10/)
+**Week 10:** [Deployed React frontend to S3/CloudFront, implemented comprehensive testing, CloudWatch monitoring, and VPC Endpoints cost optimization.](1.10-week10/)
 
 **Week 11:** [Doing task M...](1.11-week11/)
 
